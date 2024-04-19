@@ -1,0 +1,198 @@
+1748:C 19 Apr 2024 21:36:20.219 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1748:C 19 Apr 2024 21:36:20.219 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1748, just started
+1748:C 19 Apr 2024 21:36:20.219 # Configuration loaded
+1748:M 19 Apr 2024 21:36:20.222 * Running mode=standalone, port=6379.
+1748:M 19 Apr 2024 21:36:20.222 # Server initialized
+1748:M 19 Apr 2024 21:36:20.222 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1748:M 19 Apr 2024 21:36:20.222 * Ready to accept connections
+1748:M 19 Apr 2024 21:36:36.017 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:36:36.017 * Background saving started by pid 2074
+2074:C 19 Apr 2024 21:36:36.018 * DB saved on disk
+2074:C 19 Apr 2024 21:36:36.018 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:36:36.118 * Background saving terminated with success
+1748:M 19 Apr 2024 21:36:52.007 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:36:52.008 * Background saving started by pid 2100
+2100:C 19 Apr 2024 21:36:52.009 * DB saved on disk
+2100:C 19 Apr 2024 21:36:52.009 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:36:52.111 * Background saving terminated with success
+1748:M 19 Apr 2024 21:37:38.090 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:37:38.091 * Background saving started by pid 2140
+2140:C 19 Apr 2024 21:37:38.092 * DB saved on disk
+2140:C 19 Apr 2024 21:37:38.092 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:37:38.192 * Background saving terminated with success
+1748:M 19 Apr 2024 21:37:54.004 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:37:54.005 * Background saving started by pid 2161
+2161:C 19 Apr 2024 21:37:54.010 * DB saved on disk
+2161:C 19 Apr 2024 21:37:54.011 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:37:54.108 * Background saving terminated with success
+1748:M 19 Apr 2024 21:38:10.070 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:38:10.071 * Background saving started by pid 2175
+2175:C 19 Apr 2024 21:38:10.073 * DB saved on disk
+2175:C 19 Apr 2024 21:38:10.073 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:38:10.172 * Background saving terminated with success
+1748:M 19 Apr 2024 21:39:54.950 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:39:54.951 * Background saving started by pid 2257
+2257:C 19 Apr 2024 21:39:54.954 * DB saved on disk
+2257:C 19 Apr 2024 21:39:54.954 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:39:55.052 * Background saving terminated with success
+1748:M 19 Apr 2024 21:40:11.082 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:40:11.083 * Background saving started by pid 2277
+2277:C 19 Apr 2024 21:40:11.088 * DB saved on disk
+2277:C 19 Apr 2024 21:40:11.089 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:40:11.184 * Background saving terminated with success
+1748:M 19 Apr 2024 21:42:49.332 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:42:49.332 * Background saving started by pid 2388
+2388:C 19 Apr 2024 21:42:49.335 * DB saved on disk
+2388:C 19 Apr 2024 21:42:49.335 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:42:49.434 * Background saving terminated with success
+1748:M 19 Apr 2024 21:43:05.007 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:43:05.007 * Background saving started by pid 2404
+2404:C 19 Apr 2024 21:43:05.012 * DB saved on disk
+2404:C 19 Apr 2024 21:43:05.013 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:43:05.110 * Background saving terminated with success
+1748:M 19 Apr 2024 21:44:03.490 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:44:03.490 * Background saving started by pid 2464
+2464:C 19 Apr 2024 21:44:03.491 * DB saved on disk
+2464:C 19 Apr 2024 21:44:03.491 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:44:03.591 * Background saving terminated with success
+1748:M 19 Apr 2024 21:44:19.099 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:44:19.099 * Background saving started by pid 2496
+2496:C 19 Apr 2024 21:44:19.105 * DB saved on disk
+2496:C 19 Apr 2024 21:44:19.105 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:44:19.201 * Background saving terminated with success
+1748:M 19 Apr 2024 21:44:35.053 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:44:35.053 * Background saving started by pid 2507
+2507:C 19 Apr 2024 21:44:35.062 * DB saved on disk
+2507:C 19 Apr 2024 21:44:35.062 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:44:35.155 * Background saving terminated with success
+1748:M 19 Apr 2024 21:44:51.071 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:44:51.072 * Background saving started by pid 2519
+2519:C 19 Apr 2024 21:44:51.078 * DB saved on disk
+2519:C 19 Apr 2024 21:44:51.079 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:44:51.173 * Background saving terminated with success
+1748:M 19 Apr 2024 21:45:57.214 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:45:57.214 * Background saving started by pid 2576
+2576:C 19 Apr 2024 21:45:57.216 * DB saved on disk
+2576:C 19 Apr 2024 21:45:57.216 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:45:57.315 * Background saving terminated with success
+1748:M 19 Apr 2024 21:46:13.001 * 1 changes in 15 seconds. Saving...
+1748:M 19 Apr 2024 21:46:13.002 * Background saving started by pid 2596
+2596:C 19 Apr 2024 21:46:13.003 * DB saved on disk
+2596:C 19 Apr 2024 21:46:13.003 * RDB: 0 MB of memory used by copy-on-write
+1748:M 19 Apr 2024 21:46:13.102 * Background saving terminated with success
+1748:signal-handler (1713563184) Received SIGTERM scheduling shutdown...
+1748:M 19 Apr 2024 21:46:24.174 # User requested shutdown...
+1748:M 19 Apr 2024 21:46:24.174 * Saving the final RDB snapshot before exiting.
+1748:M 19 Apr 2024 21:46:24.175 * DB saved on disk
+1748:M 19 Apr 2024 21:46:24.175 # Redis is now ready to exit, bye bye...
+1511:C 19 Apr 2024 21:46:42.672 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1511:C 19 Apr 2024 21:46:42.672 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1511, just started
+1511:C 19 Apr 2024 21:46:42.672 # Configuration loaded
+1511:M 19 Apr 2024 21:46:42.674 * Running mode=standalone, port=6379.
+1511:M 19 Apr 2024 21:46:42.674 # Server initialized
+1511:M 19 Apr 2024 21:46:42.674 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1511:M 19 Apr 2024 21:46:42.675 * DB loaded from disk: 0.001 seconds
+1511:M 19 Apr 2024 21:46:42.675 * Ready to accept connections
+1511:M 19 Apr 2024 21:47:06.523 * 1 changes in 15 seconds. Saving...
+1511:M 19 Apr 2024 21:47:06.523 * Background saving started by pid 1809
+1809:C 19 Apr 2024 21:47:06.525 * DB saved on disk
+1809:C 19 Apr 2024 21:47:06.525 * RDB: 0 MB of memory used by copy-on-write
+1511:M 19 Apr 2024 21:47:06.624 * Background saving terminated with success
+1511:M 19 Apr 2024 21:47:22.101 * 1 changes in 15 seconds. Saving...
+1511:M 19 Apr 2024 21:47:22.102 * Background saving started by pid 1834
+1834:C 19 Apr 2024 21:47:22.106 * DB saved on disk
+1834:C 19 Apr 2024 21:47:22.107 * RDB: 0 MB of memory used by copy-on-write
+1511:M 19 Apr 2024 21:47:22.204 * Background saving terminated with success
+1511:signal-handler (1713563250) Received SIGTERM scheduling shutdown...
+1511:M 19 Apr 2024 21:47:30.653 # User requested shutdown...
+1511:M 19 Apr 2024 21:47:30.653 * Saving the final RDB snapshot before exiting.
+1511:M 19 Apr 2024 21:47:30.655 * DB saved on disk
+1511:M 19 Apr 2024 21:47:30.655 # Redis is now ready to exit, bye bye...
+1503:C 19 Apr 2024 21:49:05.669 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1503:C 19 Apr 2024 21:49:05.669 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1503, just started
+1503:C 19 Apr 2024 21:49:05.669 # Configuration loaded
+1503:M 19 Apr 2024 21:49:05.670 * Running mode=standalone, port=6379.
+1503:M 19 Apr 2024 21:49:05.670 # Server initialized
+1503:M 19 Apr 2024 21:49:05.670 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1503:M 19 Apr 2024 21:49:05.671 * DB loaded from disk: 0.001 seconds
+1503:M 19 Apr 2024 21:49:05.671 * Ready to accept connections
+1503:M 19 Apr 2024 21:51:48.765 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:51:48.766 * Background saving started by pid 1913
+1913:C 19 Apr 2024 21:51:48.768 * DB saved on disk
+1913:C 19 Apr 2024 21:51:48.768 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:51:48.866 * Background saving terminated with success
+1503:M 19 Apr 2024 21:52:04.049 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:52:04.050 * Background saving started by pid 1931
+1931:C 19 Apr 2024 21:52:04.054 * DB saved on disk
+1931:C 19 Apr 2024 21:52:04.054 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:52:04.152 * Background saving terminated with success
+1503:M 19 Apr 2024 21:52:20.063 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:52:20.064 * Background saving started by pid 1944
+1944:C 19 Apr 2024 21:52:20.070 * DB saved on disk
+1944:C 19 Apr 2024 21:52:20.071 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:52:20.165 * Background saving terminated with success
+1503:M 19 Apr 2024 21:52:58.710 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:52:58.710 * Background saving started by pid 1986
+1986:C 19 Apr 2024 21:52:58.712 * DB saved on disk
+1986:C 19 Apr 2024 21:52:58.713 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:52:58.810 * Background saving terminated with success
+1503:M 19 Apr 2024 21:53:14.069 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:53:14.070 * Background saving started by pid 2011
+2011:C 19 Apr 2024 21:53:14.076 * DB saved on disk
+2011:C 19 Apr 2024 21:53:14.077 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:53:14.174 * Background saving terminated with success
+1503:M 19 Apr 2024 21:53:34.489 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:53:34.490 * Background saving started by pid 2023
+2023:C 19 Apr 2024 21:53:34.492 * DB saved on disk
+2023:C 19 Apr 2024 21:53:34.493 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:53:34.591 * Background saving terminated with success
+1503:M 19 Apr 2024 21:53:50.030 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:53:50.030 * Background saving started by pid 2036
+2036:C 19 Apr 2024 21:53:50.035 * DB saved on disk
+2036:C 19 Apr 2024 21:53:50.036 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:53:50.132 * Background saving terminated with success
+1503:M 19 Apr 2024 21:54:06.677 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:54:06.677 * Background saving started by pid 2061
+2061:C 19 Apr 2024 21:54:06.680 * DB saved on disk
+2061:C 19 Apr 2024 21:54:06.681 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:54:06.778 * Background saving terminated with success
+1503:M 19 Apr 2024 21:55:47.451 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:55:47.452 * Background saving started by pid 2138
+2138:C 19 Apr 2024 21:55:47.457 * DB saved on disk
+2138:C 19 Apr 2024 21:55:47.458 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:55:47.553 * Background saving terminated with success
+1503:M 19 Apr 2024 21:56:39.852 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:56:39.852 * Background saving started by pid 2184
+2184:C 19 Apr 2024 21:56:39.854 * DB saved on disk
+2184:C 19 Apr 2024 21:56:39.854 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:56:39.953 * Background saving terminated with success
+1503:M 19 Apr 2024 21:56:55.048 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:56:55.048 * Background saving started by pid 2200
+2200:C 19 Apr 2024 21:56:55.056 * DB saved on disk
+2200:C 19 Apr 2024 21:56:55.058 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:56:55.148 * Background saving terminated with success
+1503:M 19 Apr 2024 21:57:11.074 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:57:11.075 * Background saving started by pid 2230
+2230:C 19 Apr 2024 21:57:11.083 * DB saved on disk
+2230:C 19 Apr 2024 21:57:11.084 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:57:11.177 * Background saving terminated with success
+1503:M 19 Apr 2024 21:57:57.491 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 21:57:57.491 * Background saving started by pid 2264
+2264:C 19 Apr 2024 21:57:57.493 * DB saved on disk
+2264:C 19 Apr 2024 21:57:57.494 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 21:57:57.595 * Background saving terminated with success
+1503:M 19 Apr 2024 22:00:05.063 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 22:00:05.063 * Background saving started by pid 2355
+2355:C 19 Apr 2024 22:00:05.067 * DB saved on disk
+2355:C 19 Apr 2024 22:00:05.068 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 22:00:05.167 * Background saving terminated with success
+1503:M 19 Apr 2024 22:00:21.032 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 22:00:21.032 * Background saving started by pid 2387
+2387:C 19 Apr 2024 22:00:21.036 * DB saved on disk
+2387:C 19 Apr 2024 22:00:21.037 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 22:00:21.134 * Background saving terminated with success
+1503:M 19 Apr 2024 22:00:37.026 * 1 changes in 15 seconds. Saving...
+1503:M 19 Apr 2024 22:00:37.027 * Background saving started by pid 2403
+2403:C 19 Apr 2024 22:00:37.033 * DB saved on disk
+2403:C 19 Apr 2024 22:00:37.034 * RDB: 0 MB of memory used by copy-on-write
+1503:M 19 Apr 2024 22:00:37.131 * Background saving terminated with success
