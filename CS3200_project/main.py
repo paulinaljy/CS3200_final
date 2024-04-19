@@ -1,5 +1,6 @@
 from flask import Flask, redirect
 from database import mysql
+from read import read
 
 app = Flask(__name__)
 
@@ -8,6 +9,9 @@ app.config['MYSQL_DATABASE_PASSWORD'] = 'MyNewPass'
 app.config['MYSQL_DATABASE_DB'] = 'canvas'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
+
+app.register_blueprint(read)
+
 
 @app.route('/')
 def default():
