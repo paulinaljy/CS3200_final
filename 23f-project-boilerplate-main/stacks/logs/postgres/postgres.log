@@ -1,0 +1,23 @@
+2024-04-19 21:36:20.276 UTC [1758] LOG:  starting PostgreSQL 13.14 (Ubuntu 13.14-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit
+2024-04-19 21:36:20.276 UTC [1758] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-04-19 21:36:20.283 UTC [1758] LOG:  listening on Unix socket "/tmp/appsmith/pg-runtime/.s.PGSQL.5432"
+2024-04-19 21:36:20.306 UTC [1794] LOG:  database system was shut down at 2024-04-19 21:36:19 UTC
+2024-04-19 21:36:20.321 UTC [1758] LOG:  database system is ready to accept connections
+2024-04-19 21:46:18.116 UTC [1758] LOG:  received smart shutdown request
+2024-04-19 21:46:18.121 UTC [1758] LOG:  background worker "logical replication launcher" (PID 1805) exited with exit code 1
+2024-04-19 21:46:18.121 UTC [1800] LOG:  shutting down
+2024-04-19 21:46:18.135 UTC [1758] LOG:  database system is shut down
+2024-04-19 21:46:42.696 UTC [1521] LOG:  starting PostgreSQL 13.14 (Ubuntu 13.14-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit
+2024-04-19 21:46:42.696 UTC [1521] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-04-19 21:46:42.698 UTC [1521] LOG:  listening on Unix socket "/tmp/appsmith/pg-runtime/.s.PGSQL.5432"
+2024-04-19 21:46:42.704 UTC [1555] LOG:  database system was shut down at 2024-04-19 21:46:18 UTC
+2024-04-19 21:46:42.711 UTC [1521] LOG:  database system is ready to accept connections
+2024-04-19 21:47:25.215 UTC [1521] LOG:  received smart shutdown request
+2024-04-19 21:47:25.220 UTC [1521] LOG:  background worker "logical replication launcher" (PID 1567) exited with exit code 1
+2024-04-19 21:47:25.220 UTC [1561] LOG:  shutting down
+2024-04-19 21:47:25.234 UTC [1521] LOG:  database system is shut down
+2024-04-19 21:49:05.706 UTC [1514] LOG:  starting PostgreSQL 13.14 (Ubuntu 13.14-1.pgdg20.04+1) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit
+2024-04-19 21:49:05.706 UTC [1514] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-04-19 21:49:05.709 UTC [1514] LOG:  listening on Unix socket "/tmp/appsmith/pg-runtime/.s.PGSQL.5432"
+2024-04-19 21:49:05.718 UTC [1547] LOG:  database system was shut down at 2024-04-19 21:47:25 UTC
+2024-04-19 21:49:05.726 UTC [1514] LOG:  database system is ready to accept connections

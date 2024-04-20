@@ -1,0 +1,899 @@
+Load environment configuration
+Waiting for RTS to start ...
+{"success":true}RTS started.
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@6659c656]
+SLF4J: Found provider [org.slf4j.reload4j.Reload4jServiceProvider@6d5380c2]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [ch.qos.logback.classic.spi.LogbackServiceProvider@6659c656]
+[2024-04-19 21:49:07,395]  - Starting ServerApplication vv1.21 using Java 17.0.9 with PID 1509 (/opt/appsmith/backend/server.jar started by root in /opt/appsmith/backend)
+[2024-04-19 21:49:07,395]  - Running with Spring Boot v3.0.9, Spring v6.0.11
+[2024-04-19 21:49:07,396]  - The following 1 profile is active: "production"
+[2024-04-19 21:49:08,087]  - Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-04-19 21:49:08,088]  - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+[2024-04-19 21:49:08,282]  - Finished Spring Data repository scanning in 192 ms. Found 44 Reactive MongoDB repository interfaces.
+[2024-04-19 21:49:09,474]  - Application started with build version v1.21, and commitSha 00e11e8800f05b82cc5e794e3730c523e6e32729
+[2024-04-19 21:49:09,795]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.8.2"}, "os": {"type": "Linux", "name": "Linux", "architecture": "aarch64", "version": "6.6.12-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.9+9"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@77c7ed8e, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@46d8f407], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@453d496b]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@320494b6], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+[2024-04-19 21:49:09,894]  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=53526875, setName='mr1', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000004, setVersion=1, topologyVersion=TopologyVersion{processId=6622e6d11d99b3c77d464f6d, counter=6}, lastWriteDate=Fri Apr 19 21:49:06 UTC 2024, lastUpdateTimeNanos=1082581522783}
+[2024-04-19 21:49:11,147]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Linux", "name": "Linux", "architecture": "aarch64", "version": "6.6.12-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.9+9"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@dd4aec3, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@46d8f407], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@453d496b]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@320494b6], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+[2024-04-19 21:49:11,153]  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=8422959, setName='mr1', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000004, setVersion=1, topologyVersion=TopologyVersion{processId=6622e6d11d99b3c77d464f6d, counter=6}, lastWriteDate=Fri Apr 19 21:49:06 UTC 2024, lastUpdateTimeNanos=1083846664409}
+[2024-04-19 21:49:11,318]  - Enabled plugins: []
+[2024-04-19 21:49:11,319]  - Disabled plugins: []
+[2024-04-19 21:49:11,323]  - PF4J version 3.10.0 in 'deployment' mode
+[2024-04-19 21:49:11,501]  - Plugin 'appsmithai-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'saas-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'google-sheets-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'js-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'oracle-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'smtp-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'amazons3-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'mysql-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'restapi-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'postgres-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'googleai-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'snowflake-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'anthropic-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'elasticsearch-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'mssql-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'redshift-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'databricks-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'mongo-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'graphql-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'aws-lambda-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'openai-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'dynamo-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'arangodb-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'redis-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Plugin 'firestore-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:49:11,501]  - Start plugin 'appsmithai-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,508]  - Start plugin 'saas-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,509]  - Start plugin 'google-sheets-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,545]  - Start plugin 'js-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,545]  - Start plugin 'oracle-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,553]  - Start plugin 'smtp-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,557]  - Start plugin 'amazons3-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,565]  - Start plugin 'mysql-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,573]  - Start plugin 'restapi-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,580]  - Start plugin 'postgres-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,588]  - Start plugin 'googleai-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,588]  - Start plugin 'snowflake-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,605]  - Start plugin 'anthropic-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,605]  - Start plugin 'elasticsearch-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,606]  - Start plugin 'mssql-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,614]  - Start plugin 'redshift-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,623]  - Start plugin 'databricks-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,630]  - Start plugin 'mongo-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,633]  - Start plugin 'graphql-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,633]  - Start plugin 'aws-lambda-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,661]  - Start plugin 'openai-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,665]  - Start plugin 'dynamo-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,679]  - Start plugin 'arangodb-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:49:11,680]  - Start plugin 'redis-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:11,685]  - Start plugin 'firestore-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:49:13,007]  - Mongock runner COMMUNITY version[5.1.6]
+[2024-04-19 21:49:13,007]  - Running Mongock with NO metadata
+[2024-04-19 21:49:13,007]  - Property transaction-enabled not provided. It will become true as default in next versions. Set explicit value to false in case transaction are not desired.
+[2024-04-19 21:49:13,007]  - Property transaction-enabled not provided and is unknown if driver is transactionable. BY DEFAULT MONGOCK WILL RUN IN NO-TRANSACTION MODE.
+[2024-04-19 21:49:13,050]  - Reflections took 33 ms to scan 1 urls, producing 5 keys and 60 values
+[2024-04-19 21:49:13,068]  - Reflections took 10 ms to scan 1 urls, producing 5 keys and 60 values
+[2024-04-19 21:49:13,201]  - Mongock trying to acquire the lock
+[2024-04-19 21:49:13,220]  - Mongock acquired the lock until: Fri Apr 19 21:50:13 UTC 2024
+[2024-04-19 21:49:13,221]  - Starting mongock lock daemon...
+[2024-04-19 21:49:13,229]  - Mongock starting the data migration sequence id[2024-04-19T21:49:12.975189210-737]...
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="initialize-schema-version", "type"="execution", "author"="", "class"="DatabaseChangelog0", "method"="initializeSchemaVersion"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="initial-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="initialPlugins"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="initial-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addInitialIndexes"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="set-initial-sequence-for-datasource", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setInitialSequenceForDatasource"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="set-plugin-image-and-docs-link", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setPluginImageAndDocsLink"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="install-mysql-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="mysqlPlugin"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="update-database-documentation-links", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateDatabaseDocumentationLinks"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="generate-unique-id-for-instance", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="generateUniqueIdForInstance"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="fix-password-reset-token-expiration", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="fixTokenExpiration"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="add-elastic-search-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addElasticSearchPlugin"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="add-dynamo-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addDynamoPlugin"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="use-png-logos", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="usePngLogos"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="add-redis-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addRedisPlugin"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="add-msSql-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addMsSqlPlugin"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="createNewPageIndexAfterDroppingNewPage", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewPageIndexAfterDroppingNewPage"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="createNewActionIndexAfterDroppingNewAction", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewActionIndexAfterDroppingNewAction"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="new-page-new-action-add-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewPageAndNewActionNewIndexes"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="update-action-index-to-single-multiple-indices", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateActionIndexToSingleMultipleIndices"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="add-firestore-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addFirestorePlugin"}
+[2024-04-19 21:49:13,230]  - PASSED OVER - {"id"="add-redshift-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addRedshiftPlugin"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="clear-userdata-collection", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="clearUserDataCollection"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="update-database-documentation-links-v1-2-1", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateDatabaseDocumentationLinks_v1_2_1"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-amazons3-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addAmazonS3Plugin"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="update-plugin-datasource-form-components", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updatePluginDatasourceFormComponents"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="update-s3-datasource-configuration-and-label", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateS3DatasourceConfigurationAndLabel"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-google-sheets-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addGoogleSheetsPlugin"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="mark-instance-unregistered", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="markInstanceAsUnregistered"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-snowflake-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addSnowflakePlugin"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-arangodb-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addArangoDBPlugin"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="set-svg-logo-to-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setSvgLogoToPluginIcons"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="create-plugin-reference-for-genarate-CRUD-page", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createPluginReferenceForGenerateCRUDPage"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="create-plugin-reference-for-S3-GSheet-genarate-CRUD-page", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createPluginReferenceForS3AndGSheetGenerateCRUDPage"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-js-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addJSPlugin"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="update-plugin-package-name-index", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updatePluginPackageNameIndexToPluginNamePackageNameAndVersion"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="migrate-s3-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateS3PluginToUqi"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-smtp-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addSmtpPluginPlugin"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-google-sheets-plugin-name", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addPluginNameForGoogleSheets"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="migrate-firestore-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePluginToUqi"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="migrate-firestore-to-uqi-3", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePluginToUqi3"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="update-index-for-git", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateGitIndexes"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="use-assets-cdn-for-plugin-icons", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="useAssetsCDNForPluginIcons"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="update-index-for-newAction-actionCollection-userData", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateNewActionActionCollectionAndUserDataIndexes"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="mark-mssql-crud-unavailable", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="markMSSQLCrudUnavailable"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="update-index-for-newAction-actionCollection", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateNewActionActionCollectionIndexes"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="fix-plugin-title-casing", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="fixPluginTitleCasing"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="update-git-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addIndexesForGit"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-workspace-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addWorkspaceIndexes"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-default-tenant", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addDefaultTenant"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="organization-to-workspace-indexes-recreate", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="organizationToWorkspaceIndexesRecreate"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="flush-spring-redis-keys-2a", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="clearRedisCache2"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-anonymousUser", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addAnonymousUser"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-instance-config-object", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addInstanceConfigurationPlaceHolder"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="add-anonymous-user-permission-group", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addAnonymousUserPermissionGroup"}
+[2024-04-19 21:49:13,231]  - PASSED OVER - {"id"="create-themes-indices", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="createThemesIndices"}
+[2024-04-19 21:49:13,260]  - method[createSystemThemes3] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,385]  - RE-APPLIED - {"id"="create-system-themes-v3", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="createSystemThemes3"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="create-indices-on-permissions-for-performance", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addPermissionGroupIndex"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="update-bad-theme-state", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateBadThemeState"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="add-tenant-admin-permissions-instance-admin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addTenantAdminPermissionsToInstanceAdmin"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="add-graphql-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addGraphQLPlugin"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="indices-recommended-by-mongodb-cloud", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addIndicesRecommendedByMongoCloud"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="add-unique-index-for-uidstring", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addUniqueIndexOnUidString"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="change-readPermissionGroup-to-readPermissionGroupMembers", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="modifyReadPermissionGroupToReadPermissionGroupMembers"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="delete-permissions-in-permissionGroups", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="deletePermissionsInPermissionGroups"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="remove-usage-pulses-for-appsmith-cloud", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="removeUsagePulsesForAppsmithCloud"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="add-ssl-mode-settings-for-existing-mssql-datasources", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addSslModeSettingsForExistingMssqlDatasource"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="add-oracle-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addOraclePlugin"}
+[2024-04-19 21:49:13,386]  - PASSED OVER - {"id"="update-oracle-plugin-name", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateOraclePluginName"}
+[2024-04-19 21:49:13,389]  - method[updateSuperUsers] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.repositories.CacheableRepositoryHelper, com.appsmith.server.solutions.PolicySolution, com.appsmith.server.acl.PolicyGenerator]
+[2024-04-19 21:49:13,413]  - RE-APPLIED - {"id"="update-super-users", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateSuperUsers"}
+[2024-04-19 21:49:13,414]  - method[com.appsmith.server.migrations.db.ce.Migration003AddInstanceNameToTenantConfiguration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,414]  - PASSED OVER - {"id"="add-instance-name-env-variable-tenant-configuration", "type"="execution", "author"="default_author", "class"="Migration003AddInstanceNameToTenantConfiguration", "method"="addInstanceNameEnvVarToTenantConfiguration"}
+[2024-04-19 21:49:13,415]  - method[com.appsmith.server.migrations.db.ce.Migration004PermissionGroupDefaultWorkspaceIdMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,415]  - PASSED OVER - {"id"="migrate-default-workspace-id-to-default-domain-id", "type"="execution", "author"="default_author", "class"="Migration004PermissionGroupDefaultWorkspaceIdMigration", "method"="defaultWorkspaceIdMigration"}
+[2024-04-19 21:49:13,415]  - method[com.appsmith.server.migrations.db.ce.Migration005CreateIndexForApplicationSnapshotMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,415]  - PASSED OVER - {"id"="create-index-for-application-snapshot-collection", "type"="execution", "author"="default_author", "class"="Migration005CreateIndexForApplicationSnapshotMigration", "method"="addIndexOnApplicationIdAndChunkOrder"}
+[2024-04-19 21:49:13,416]  - method[com.appsmith.server.migrations.db.ce.Migration006ResetOnPageLoadEdgesInLayouts] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,416]  - PASSED OVER - {"id"="reset-on-page-load-edges-in-layouts", "type"="execution", "author"="default_author", "class"="Migration006ResetOnPageLoadEdgesInLayouts", "method"="executeMigration"}
+[2024-04-19 21:49:13,416]  - method[com.appsmith.server.migrations.db.ce.Migration007OptOutUnsupportedPluginsForAirGap] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,416]  - PASSED OVER - {"id"="opt-out-unsupported-plugins-airgap-instance", "type"="execution", "author"="default_author", "class"="Migration007OptOutUnsupportedPluginsForAirGap", "method"="optOutUnsupportedPluginsForAirGapInstance"}
+[2024-04-19 21:49:13,417]  - method[com.appsmith.server.migrations.db.ce.Migration008SupportNonHostedPluginsForAirgap] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,417]  - PASSED OVER - {"id"="support-non-self-hosted-plugins-for-airgap", "type"="execution", "author"="default_author", "class"="Migration008SupportNonHostedPluginsForAirgap", "method"="supportNonHostedPluginsForAirgap"}
+[2024-04-19 21:49:13,417]  - method[com.appsmith.server.migrations.db.ce.Migration009UpdateOracleLogoToSVG] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,417]  - PASSED OVER - {"id"="update-oracle-logo-to-svg", "type"="execution", "author"="default_author", "class"="Migration009UpdateOracleLogoToSVG", "method"="updateOracleLogoToSVG"}
+[2024-04-19 21:49:13,418]  - method[com.appsmith.server.migrations.db.ce.Migration010UpdatePluginDocsLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,418]  - PASSED OVER - {"id"="update-plugins-docs-link", "type"="execution", "author"="default_author", "class"="Migration010UpdatePluginDocsLink", "method"="updatePluginDocumentationLinks"}
+[2024-04-19 21:49:13,418]  - method[com.appsmith.server.migrations.db.ce.Migration011CreateIndexDefaultDomainIdDefaultDomainTypeDropIndexDefaultWorkspaceId] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,418]  - PASSED OVER - {"id"="create-index-default-domain-id-default-domain-type", "type"="execution", "author"="default_author", "class"="Migration011CreateIndexDefaultDomainIdDefaultDomainTypeDropIndexDefaultWorkspaceId", "method"="createNewIndexDefaultDomainIdDefaultDomainTypeAndDropOldIndexDefaultWorkspaceId"}
+[2024-04-19 21:49:13,422]  - method[com.appsmith.server.migrations.db.ce.Migration012RemoveStructureFromWithinDatasource] with arguments: [org.springframework.data.mongodb.core.MongoOperations, org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,422]  - PASSED OVER - {"id"="remove-structure-from-within-datasource-modified", "type"="execution", "author"="default_author", "class"="Migration012RemoveStructureFromWithinDatasource", "method"="executeMigration"}
+[2024-04-19 21:49:13,423]  - method[com.appsmith.server.migrations.db.ce.Migration013AddEmailBodyTypeToSMTPPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,423]  - PASSED OVER - {"id"="add-smtp-email-body-type", "type"="execution", "author"="default_author", "class"="Migration013AddEmailBodyTypeToSMTPPlugin", "method"="addSmtpEmailBodyType"}
+[2024-04-19 21:49:13,423]  - method[com.appsmith.server.migrations.db.ce.Migration014AddIndexToDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,423]  - PASSED OVER - {"id"="index-for-datasource-storage", "type"="execution", "author"="default_author", "class"="Migration014AddIndexToDatasourceStorage", "method"="addingIndexToDatasourceStorage"}
+[2024-04-19 21:49:13,424]  - method[com.appsmith.server.migrations.db.ce.Migration015AddPluginTypeIndexToNewActionCollection] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,424]  - PASSED OVER - {"id"="app-id-plugin-type-index-for-new-action", "type"="execution", "author"="default_author", "class"="Migration015AddPluginTypeIndexToNewActionCollection", "method"="addingIndexToNewAction"}
+[2024-04-19 21:49:13,424]  - method[com.appsmith.server.migrations.db.ce.Migration016RenameIndexesWithLongNames] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,424]  - PASSED OVER - {"id"="rename-indexes-with-long-names", "type"="execution", "author"="default_author", "class"="Migration016RenameIndexesWithLongNames", "method"="executeMigration"}
+[2024-04-19 21:49:13,425]  - method[com.appsmith.server.migrations.db.ce.Migration017UnsetEncryptionVersion2Fields] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,425]  - PASSED OVER - {"id"="unset-not-encrypted-encryption-version-2-fields", "type"="execution", "author"="default_author", "class"="Migration017UnsetEncryptionVersion2Fields", "method"="executeMigration"}
+[2024-04-19 21:49:13,425]  - method[com.appsmith.server.migrations.db.ce.Migration018UpdateOraclePluginDocumentationLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,425]  - PASSED OVER - {"id"="update-oracle-doc-link", "type"="execution", "author"="default_author", "class"="Migration018UpdateOraclePluginDocumentationLink", "method"="updateOracleDocumentationLink"}
+[2024-04-19 21:49:13,426]  - method[com.appsmith.server.migrations.db.ce.Migration019RemoveNullEnvIdDatasourceStructureDocuments] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,426]  - PASSED OVER - {"id"="delete-null-envId-key-document", "type"="execution", "author"="default_author", "class"="Migration019RemoveNullEnvIdDatasourceStructureDocuments", "method"="executeMigration"}
+[2024-04-19 21:49:13,428]  - method[com.appsmith.server.migrations.db.ce.Migration021MoveGoogleMapsKeyToTenantConfiguration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.configurations.CommonConfig]
+[2024-04-19 21:49:13,428]  - PASSED OVER - {"id"="move-google-maps-key-to-tenant-configuration", "type"="execution", "author"="default_author", "class"="Migration021MoveGoogleMapsKeyToTenantConfiguration", "method"="executeMigration"}
+[2024-04-19 21:49:13,428]  - method[com.appsmith.server.migrations.db.ce.Migration022AddConnectionMethodDefaultValueToAllMySQLDatasources] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,428]  - PASSED OVER - {"id"="add-connection-method-default-value-for-mysql", "type"="execution", "author"="default_author", "class"="Migration022AddConnectionMethodDefaultValueToAllMySQLDatasources", "method"="updateConnectionMethodDefaultValueForMySQL"}
+[2024-04-19 21:49:13,428]  - method[com.appsmith.server.migrations.db.ce.Migration023UpdateJSPluginIcon] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,429]  - PASSED OVER - {"id"="update-js-plugin-icon", "type"="execution", "author"="default_author", "class"="Migration023UpdateJSPluginIcon", "method"="executeMigration"}
+[2024-04-19 21:49:13,429]  - method[com.appsmith.server.migrations.db.ce.Migration024EnableGenerateCRUDPageToggleForMssqlPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,429]  - PASSED OVER - {"id"="enable-generate-crud-page-for-mssql", "type"="execution", "author"="default_author", "class"="Migration024EnableGenerateCRUDPageToggleForMssqlPlugin", "method"="enableGenerateCRUDPageToggle"}
+[2024-04-19 21:49:13,429]  - method[com.appsmith.server.migrations.db.ce.Migration025AddIndexDeletedInApplication] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,429]  - PASSED OVER - {"id"="add-index-application-deleted", "type"="execution", "author"="default_author", "class"="Migration025AddIndexDeletedInApplication", "method"="createIndexInApplicationCollection"}
+[2024-04-19 21:49:13,430]  - method[com.appsmith.server.migrations.db.ce.Migration025RemoveUnassignPermissionFromUnnecessaryRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,430]  - PASSED OVER - {"id"="remove-unassign-permission-from-workspace-dev-viewer-roles", "type"="execution", "author"="default_author", "class"="Migration025RemoveUnassignPermissionFromUnnecessaryRoles", "method"="executeMigration"}
+[2024-04-19 21:49:13,430]  - method[com.appsmith.server.migrations.db.ce.Migration026AddIndexTenantAndDeletedInWorkspace] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,430]  - PASSED OVER - {"id"="add-index-workspace-tenant-deleted", "type"="execution", "author"="default_author", "class"="Migration026AddIndexTenantAndDeletedInWorkspace", "method"="addIndexInWorkspaceCollection"}
+[2024-04-19 21:49:13,431]  - method[com.appsmith.server.migrations.db.ce.Migration027AddIndexDatasourceIdAndDeletedInAction] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,431]  - PASSED OVER - {"id"="new-action-compound-index-datasource-id", "type"="execution", "author"="default_author", "class"="Migration027AddIndexDatasourceIdAndDeletedInAction", "method"="addIndexInNewActionCollection"}
+[2024-04-19 21:49:13,431]  - method[com.appsmith.server.migrations.db.ce.Migration028TagUserManagementRolesWithoutDefaultDomainTypeAndId] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,431]  - PASSED OVER - {"id"="tag-user-management-roles-without-default-domain-type-and-id", "type"="execution", "author"="default_author", "class"="Migration028TagUserManagementRolesWithoutDefaultDomainTypeAndId", "method"="tagUserManagementRolesWithoutDefaultDomainTypeAndId"}
+[2024-04-19 21:49:13,431]  - method[com.appsmith.server.migrations.db.ce.Migration029PopulateDefaultDomainIdInUserManagementRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,431]  - PASSED OVER - {"id"="populate-default-domain-id-in-user-management-roles", "type"="execution", "author"="default_author", "class"="Migration029PopulateDefaultDomainIdInUserManagementRoles", "method"="populateDefaultDomainIdInUserManagementRoles"}
+[2024-04-19 21:49:13,432]  - method[com.appsmith.server.migrations.db.ce.Migration030TagUsersWithNoUserManagementRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,432]  - PASSED OVER - {"id"="tag-users-with-no-user-management-roles", "type"="execution", "author"="default_author", "class"="Migration030TagUsersWithNoUserManagementRoles", "method"="tagUsersWithNoUserManagementRoles"}
+[2024-04-19 21:49:13,432]  - method[com.appsmith.server.migrations.db.ce.Migration031CreateUserManagementRolesForUsersTaggedIn030] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.solutions.PolicySolution]
+[2024-04-19 21:49:13,432]  - PASSED OVER - {"id"="create-user-management-roles-for-users-tagged-in-migration-030", "type"="execution", "author"="default_author", "class"="Migration031CreateUserManagementRolesForUsersTaggedIn030", "method"="createUserManagementRolesForUsersTaggedInMigration030"}
+[2024-04-19 21:49:13,433]  - method[com.appsmith.server.migrations.db.ce.Migration032AddingXmlParserToApplicationLibraries] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,433]  - PASSED OVER - {"id"="add-xml-parser-to-application-jslibs", "type"="execution", "author"="default_author", "class"="Migration032AddingXmlParserToApplicationLibraries", "method"="addXmlParserEntryToEachApplication"}
+[2024-04-19 21:49:13,433]  - method[com.appsmith.server.migrations.db.ce.Migration033AddOpenAIPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,433]  - PASSED OVER - {"id"="add-open-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration033AddOpenAIPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:49:13,433]  - method[com.appsmith.server.migrations.db.ce.Migration034ChangeOpenAIIntegrationDocumentationLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,433]  - PASSED OVER - {"id"="change-open-ai-integration-documentation-link", "type"="execution", "author"="default_author", "class"="Migration034ChangeOpenAIIntegrationDocumentationLink", "method"="changeDocumentationLink"}
+[2024-04-19 21:49:13,434]  - method[com.appsmith.server.migrations.db.ce.Migration035AddAnthropicPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,434]  - PASSED OVER - {"id"="add-anthropic-plugin", "type"="execution", "author"="default_author", "class"="Migration035AddAnthropicPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:49:13,435]  - method[com.appsmith.server.migrations.db.ce.Migration035RemoveMockDbEndPointInDatasourceInSelfHostedInstance] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.configurations.CommonConfig, com.appsmith.server.solutions.EnvManager]
+[2024-04-19 21:49:13,435]  - PASSED OVER - {"id"="remove-mockdb-endpoint-in-datasource-self-hosted-instance", "type"="execution", "author"="default_author", "class"="Migration035RemoveMockDbEndPointInDatasourceInSelfHostedInstance", "method"="removeMockDbEndpointInDatasource"}
+[2024-04-19 21:49:13,436]  - method[com.appsmith.server.migrations.db.ce.Migration036AddRecentlyUsedEntitiesForUserData] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,436]  - PASSED OVER - {"id"="add-recently-used-entities-for-user", "type"="execution", "author"="default_author", "class"="Migration036AddRecentlyUsedEntitiesForUserData", "method"="addRecentlyUsedEntitiesForUserData"}
+[2024-04-19 21:49:13,436]  - method[com.appsmith.server.migrations.db.ce.Migration037AddCompoundIndexForNameAndDeletedAt] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,436]  - PASSED OVER - {"id"="add-compound-index-name-deleted", "type"="execution", "author"="default_author", "class"="Migration037AddCompoundIndexForNameAndDeletedAt", "method"="addIndexInWorkspaceAndApplicationsCollection"}
+[2024-04-19 21:49:13,437]  - method[com.appsmith.server.migrations.db.ce.Migration037MarkAnonymousUserAsSystemGenerated] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,437]  - PASSED OVER - {"id"="mark-anonymous-user-as-system-generated", "type"="execution", "author"="default_author", "class"="Migration037MarkAnonymousUserAsSystemGenerated", "method"="executeMigration"}
+[2024-04-19 21:49:13,437]  - method[com.appsmith.server.migrations.db.ce.Migration038AddCompoundIndexForActionCollection] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,437]  - PASSED OVER - {"id"="add-compound-index-action-collection", "type"="execution", "author"="default_author", "class"="Migration038AddCompoundIndexForActionCollection", "method"="addIndexInActionCollection"}
+[2024-04-19 21:49:13,437]  - method[com.appsmith.server.migrations.db.ce.Migration038AddGoogleAIPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,438]  - PASSED OVER - {"id"="add-google-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration038AddGoogleAIPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:49:13,438]  - method[com.appsmith.server.migrations.db.ce.Migration039AddCompoundIndexForDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,438]  - PASSED OVER - {"id"="add-compound-index-datasource-storage", "type"="execution", "author"="default_author", "class"="Migration039AddCompoundIndexForDatasourceStorage", "method"="addIndexInDatasourceStorageCollection"}
+[2024-04-19 21:49:13,438]  - method[com.appsmith.server.migrations.db.ce.Migration039AddDatabricksPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,438]  - PASSED OVER - {"id"="add-databricks-plugin", "type"="execution", "author"="default_author", "class"="Migration039AddDatabricksPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:49:13,439]  - method[com.appsmith.server.migrations.db.ce.Migration039OpenAIMessagesJsToggle] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,439]  - PASSED OVER - {"id"="move-messages-to-data-key-in-openai", "type"="execution", "author"="default_author", "class"="Migration039OpenAIMessagesJsToggle", "method"="moveMessagesToDataKeyForSupportingJsToggle"}
+[2024-04-19 21:49:13,439]  - method[com.appsmith.server.migrations.db.ce.Migration040AddAWSLambdaPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,439]  - PASSED OVER - {"id"="add-aws-lambda-plugin", "type"="execution", "author"="default_author", "class"="Migration040AddAWSLambdaPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:49:13,439]  - method[com.appsmith.server.migrations.db.ce.Migration040AddAppsmithAiPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,439]  - PASSED OVER - {"id"="add-appsmith-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration040AddAppsmithAiPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:49:13,440]  - method[com.appsmith.server.migrations.db.ce.Migration041TagWorkspacesForGitOperationsPermissionMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,440]  - PASSED OVER - {"id"="tag-workspaces-to-migrate-adding-git-permissions", "type"="execution", "author"="default_author", "class"="Migration041TagWorkspacesForGitOperationsPermissionMigration", "method"="addPermissionForGitOperationsToExistingWorkspaces"}
+[2024-04-19 21:49:13,440]  - method[com.appsmith.server.migrations.db.ce.Migration042AddPermissionsForGitOperations] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,440]  - PASSED OVER - {"id"="add-permissions-for-git-operations", "type"="execution", "author"="default_author", "class"="Migration042AddPermissionsForGitOperations", "method"="addPermissionForGitOperationsToExistingApplications"}
+[2024-04-19 21:49:13,440]  - method[com.appsmith.server.migrations.db.ce.Migration043AddIndexActionCollectionPageID] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,441]  - PASSED OVER - {"id"="add-index-to-action-collection-default-resources-pageid", "type"="execution", "author"="default_author", "class"="Migration043AddIndexActionCollectionPageID", "method"="addIndexToActionCollectionCollection"}
+[2024-04-19 21:49:13,441]  - method[com.appsmith.server.migrations.db.ce.Migration044AddIndexesToDomainObjects] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,441]  - PASSED OVER - {"id"="add-index-to-domain-objects", "type"="execution", "author"="default_author", "class"="Migration044AddIndexesToDomainObjects", "method"="addIndexToDomainObjects"}
+[2024-04-19 21:49:13,441]  - method[com.appsmith.server.migrations.db.ce.Migration045AddDefaultAppsmithAiDatasourceForOrphanActions] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,441]  - PASSED OVER - {"id"="add-default-appsmith-datasource", "type"="execution", "author"="default_author", "class"="Migration045AddDefaultAppsmithAiDatasourceForOrphanActions", "method"="addDefaultAppsmithAiDatasourceForOrphanActions"}
+[2024-04-19 21:49:13,442]  - method[com.appsmith.server.migrations.db.ce.Migration046DeleteArchivedPlugins] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,442]  - PASSED OVER - {"id"="delete-archived-pluginsd", "type"="execution", "author"="default_author", "class"="Migration046DeleteArchivedPlugins", "method"="deleteArchivedPlugins"}
+[2024-04-19 21:49:13,446]  - method[com.appsmith.server.migrations.db.ce.Migration047AddMissingFieldsInDefaultAppsmithAiDatasource] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,446]  - PASSED OVER - {"id"="add-missing-fields-in-default-appsmith-datasource", "type"="execution", "author"="default_author", "class"="Migration047AddMissingFieldsInDefaultAppsmithAiDatasource", "method"="addMissingFieldsInDefaultAppsmithAiDatasource"}
+[2024-04-19 21:49:13,446]  - method[com.appsmith.server.migrations.db.ce.Migration048AddCompoundIndexToUserEntity] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,447]  - PASSED OVER - {"id"="add-compound-index-in-user-collection", "type"="execution", "author"="default_author", "class"="Migration048AddCompoundIndexToUserEntity", "method"="addMissingIndexInUserCollection"}
+[2024-04-19 21:49:13,447]  - method[com.appsmith.server.migrations.db.ce.Migration049RemoveLayoutBaseFields] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,447]  - PASSED OVER - {"id"="remove-layout-base-fields", "type"="execution", "author"="default_author", "class"="Migration049RemoveLayoutBaseFields", "method"="execute"}
+[2024-04-19 21:49:13,447]  - method[com.appsmith.server.migrations.db.ce.Migration020TransferToDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:49:13,447]  - PASSED OVER - {"id"="migrate-configurations-to-data-storage-v2", "type"="execution", "author"="default_author", "class"="Migration020TransferToDatasourceStorage", "method"="executeMigration"}
+[2024-04-19 21:49:13,447]  - Mongock releasing the lock
+[2024-04-19 21:49:13,447]  - Mongock releasing the lock
+[2024-04-19 21:49:13,450]  - Mongock released the lock
+[2024-04-19 21:49:13,450]  - Mongock has finished
+[2024-04-19 21:49:13,803]  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2024-04-19 21:49:13,942]  - Netty started on port 8080
+[2024-04-19 21:49:13,953]  - Started ServerApplication in 6.853 seconds (process running for 7.256)
+[2024-04-19 21:49:13,959]  - Performing RTS health check of this instance...
+[2024-04-19 21:49:13,968]  - In memory cache miss for anonymous user permission groups. Fetching from DB and adding it to in memory storage.
+[2024-04-19 21:49:13,990]  - Fetched and set conenncted mongo db version as: 5.0.26
+[2024-04-19 21:49:14,070]  - RTS health check succeeded
+[2024-04-19 21:49:14,073]  - License verification completed with status: valid
+[2024-04-19 21:49:23,953]  - Fetching features for default tenant
+[2024-04-19 21:49:33,046]  - Cancelled mongock lock daemon
+[2024-04-19 21:51:48,626] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=d9b4019f-f038-4c9f-8529-0eb20b47ef3c - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: null, branchName: null, mode: PUBLISHED
+[2024-04-19 21:51:48,937] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=3e8148d5-049d-4d5a-add0-4b2256b47804 - Going to get all applications by workspace id 6622e422cdbbd6277a5ce43a
+[2024-04-19 21:52:14,004] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-7, requestId=8d5018c3-aa1a-4690-806a-b06602a925d0 - Password reset Token: 55324602-62c0-44bb-9817-1afff30b084d for email: asdjfhb@sdfhjg.com
+[2024-04-19 21:52:14,007] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-7, requestId=8d5018c3-aa1a-4690-806a-b06602a925d0 - Password reset url for email: asdjfhb@sdfhjg.com: http://127.0.0.1:8080/user/resetPassword?token=e7ab8136b1eb02bec8130f08987a011fdacb2f9c6a075ff0c9076df4fc8daebd0abf4196086ec7e616a0494612df2842eb4be3482d57d3851fceb564cbab2aff156a4830f06550909540488168187baa7a5f71469f881a1f07cf06d0d603e9723ce36db651
+[2024-04-19 21:52:14,021]  - In the logout success handler
+[2024-04-19 21:52:14,026]  - Got request to send email to: asdjfhb@sdfhjg.com with subject: Reset your Appsmith password
+[2024-04-19 21:52:58,631] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-8, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - Cache miss for key permissionGroupsForUser:wisub@gs.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:52:58,635] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - Cache entry added for key permissionGroupsForUser:wisub@gs.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:52:58,641] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - UserServiceCEImpl::Time taken for create user: 52 ms
+[2024-04-19 21:52:58,720] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - Cache entry evicted for key permissionGroupsForUser:wisub@gs.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:52:58,727] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - UserServiceCEImpl::Time taken to create default workspace: 85 ms
+[2024-04-19 21:52:58,727] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - Created blank default workspace for user 'wisub@gs.com'.
+[2024-04-19 21:52:58,729] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - UserServiceCEImpl::Time taken to find created user: 140 ms
+[2024-04-19 21:52:58,729] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - UserSignupCEImpl::Time taken for create user and send email: 146 ms
+[2024-04-19 21:52:58,730] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - Login succeeded for user: User(name=null, email=wisub@gs.com, hashedEmail=null, passwordResetInitiated=false, source=FORM, state=null, isEnabled=true, emailVerificationRequired=null, emailVerified=null, currentWorkspaceId=null, workspaceIds=null, examplesWorkspaceId=null, groupIds=[], permissions=[], inviteToken=null, isAnonymous=false, tenantId=6622e3ddcdbbd6277a5ce41d, isSystemGenerated=null)
+[2024-04-19 21:52:58,754] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - Cache miss for key permissionGroupsForUser:wisub@gs.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:52:58,756] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - Cache entry added for key permissionGroupsForUser:wisub@gs.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:52:58,907] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - Published application 6622e7ba94737e34ee40ac82 in 49 ms
+[2024-04-19 21:52:58,911] userEmail=anonymousUser, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=89ef8234-fd98-41c3-ba69-7923203bf53c - UserSignupCEImpl::Time taken for authentication success: 175 ms
+[2024-04-19 21:52:59,060] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=7730578a-6b0b-42b4-82d7-828d21af49c0 - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: null, branchName: null, mode: PUBLISHED
+[2024-04-19 21:52:59,069] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=7730578a-6b0b-42b4-82d7-828d21af49c0 - Cache miss for key featureFlag:61d38dc21d42a0e36b889956cacf49858616b0ebdca1dc25704d1e9f8f648616
+[2024-04-19 21:52:59,406] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=reactor-http-nio-6, requestId=7730578a-6b0b-42b4-82d7-828d21af49c0 - Cache entry added for key featureFlag:61d38dc21d42a0e36b889956cacf49858616b0ebdca1dc25704d1e9f8f648616
+[2024-04-19 21:53:03,822] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=d4b9cd32-fab2-4c84-8b15-c69fa10cc6b6 - Going to get all applications by workspace id 6622e7ba94737e34ee40ac7d
+[2024-04-19 21:53:03,863] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Going to get all resources from base controller {workspaceId=[6622e7ba94737e34ee40ac7d]}
+[2024-04-19 21:53:03,880] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Fetching plugins by params: {workspaceId=[6622e7ba94737e34ee40ac7d]} for org: wisub's apps
+[2024-04-19 21:53:03,889] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin restapi-plugin
+[2024-04-19 21:53:03,892] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin elasticsearch-plugin
+[2024-04-19 21:53:03,893] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin dynamo-plugin
+[2024-04-19 21:53:03,894] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin redis-plugin
+[2024-04-19 21:53:03,896] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin firestore-plugin
+[2024-04-19 21:53:03,896] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin redshift-plugin
+[2024-04-19 21:53:03,897] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin amazons3-plugin
+[2024-04-19 21:53:03,897] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin google-sheets-plugin
+[2024-04-19 21:53:03,898] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin js-plugin
+[2024-04-19 21:53:03,899] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin smtp-plugin
+[2024-04-19 21:53:03,899] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin graphql-plugin
+[2024-04-19 21:53:03,900] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin openai-plugin
+[2024-04-19 21:53:03,900] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin anthropic-plugin
+[2024-04-19 21:53:03,901] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin googleai-plugin
+[2024-04-19 21:53:03,901] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin databricks-plugin
+[2024-04-19 21:53:03,901] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin aws-lambda-plugin
+[2024-04-19 21:53:03,902] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin appsmithai-plugin
+[2024-04-19 21:53:03,904] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin saas-plugin
+[2024-04-19 21:53:03,905] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin saas-plugin
+[2024-04-19 21:53:03,905] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=44b872b9-2a6e-47b8-bf7a-0f1862dd178f - Error loading templates metadata in plugin saas-plugin
+[2024-04-19 21:53:08,411] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=dc8769bc-a94c-4aea-881f-a66dc6246a5b - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: 6622e7ba94737e34ee40ac85, branchName: null, mode: EDIT
+[2024-04-19 21:53:08,445] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-8, requestId=dc8769bc-a94c-4aea-881f-a66dc6246a5b - Retrieved possible application ids for page, picking the appropriate one now
+[2024-04-19 21:53:08,457] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=dc8769bc-a94c-4aea-881f-a66dc6246a5b - Fetched application data for id: 6622e7ba94737e34ee40ac82
+[2024-04-19 21:53:08,478] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=dc8769bc-a94c-4aea-881f-a66dc6246a5b - Retrieved Page DTOs from DB ...
+[2024-04-19 21:53:08,479] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=dc8769bc-a94c-4aea-881f-a66dc6246a5b - Populating applicationPagesDTO ...
+[2024-04-19 21:53:08,484] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-3, requestId=dc8769bc-a94c-4aea-881f-a66dc6246a5b - Fetching plugins by params: {workspaceId=[6622e7ba94737e34ee40ac7d]} for org: wisub's apps
+[2024-04-19 21:53:08,580] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=794bb535-5316-483f-bead-75681543780d - Going to get snapshot with application id: 6622e7ba94737e34ee40ac82, branch: null
+[2024-04-19 21:53:08,696] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=253cd220-03b9-426f-a3fb-4ce509aed3cb - Going to get resource from base controller for id: 6622e7ba94737e34ee40ac7d
+[2024-04-19 21:53:34,439] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=dfa2d9d6-85d1-4373-b2ed-9587a684b671 - 
+com.appsmith.server.exceptions.AppsmithException: Git configuration is invalid. Details: Can't find valid SSH key. Please configure the application with git
+	at com.appsmith.server.applications.base.ApplicationServiceCEImpl.lambda$getSshKey$31(ApplicationServiceCEImpl.java:815)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Handler com.appsmith.server.controllers.ApplicationController#getSSHKey(String) [DispatcherHandler]
+Original Stack Trace:
+		at com.appsmith.server.applications.base.ApplicationServiceCEImpl.lambda$getSshKey$31(ApplicationServiceCEImpl.java:815)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:132)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoUsingWhen$MonoUsingWhenSubscriber.deferredComplete(MonoUsingWhen.java:268)
+		at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:527)
+		at reactor.core.publisher.Operators.complete(Operators.java:137)
+		at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:384)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:293)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:187)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2545)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:291)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onSubscribe(MDCConfig.java:54)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2545)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:291)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onSubscribe(MDCConfig.java:54)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2071)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2205)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:260)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:240)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:460)
+		at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:805)
+		at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:753)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:247)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:213)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:204)
+		at com.mongodb.reactivestreams.client.internal.BatchCursorFlux.lambda$recurseCursor$4(BatchCursorFlux.java:102)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:171)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:172)
+		at com.mongodb.reactivestreams.client.internal.MongoOperationPublisher.lambda$sinkToCallback$31(MongoOperationPublisher.java:577)
+		at com.mongodb.internal.operation.AsyncQueryBatchCursor.next(AsyncQueryBatchCursor.java:173)
+		at com.mongodb.reactivestreams.client.internal.BatchCursor.lambda$next$0(BatchCursor.java:38)
+		at reactor.core.publisher.MonoCreate.subscribe(MonoCreate.java:58)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.Mono.subscribeWith(Mono.java:4561)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4323)
+		at com.mongodb.reactivestreams.client.internal.BatchCursorFlux.recurseCursor(BatchCursorFlux.java:108)
+		at com.mongodb.reactivestreams.client.internal.BatchCursorFlux.lambda$subscribe$0(BatchCursorFlux.java:60)
+		at reactor.core.publisher.LambdaMonoSubscriber.onNext(LambdaMonoSubscriber.java:171)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:172)
+		at com.mongodb.reactivestreams.client.internal.MongoOperationPublisher.lambda$sinkToCallback$31(MongoOperationPublisher.java:577)
+		at com.mongodb.reactivestreams.client.internal.OperationExecutorImpl.lambda$execute$2(OperationExecutorImpl.java:94)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.async.function.RetryingAsyncCallbackSupplier$RetryingCallback.onResult(RetryingAsyncCallbackSupplier.java:116)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.operation.FindOperation$1.onResult(FindOperation.java:379)
+		at com.mongodb.internal.operation.CommandOperationHelper.lambda$transformingReadCallback$10(CommandOperationHelper.java:332)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor$1.onResult(DefaultServer.java:242)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.connection.CommandProtocolImpl$1.onResult(CommandProtocolImpl.java:84)
+		at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection$1.onResult(DefaultConnectionPool.java:683)
+		at com.mongodb.internal.connection.UsageTrackingInternalConnection$2.onResult(UsageTrackingInternalConnection.java:159)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.connection.InternalStreamConnection$2$1.onResult(InternalStreamConnection.java:524)
+		at com.mongodb.internal.connection.InternalStreamConnection$2$1.onResult(InternalStreamConnection.java:501)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:824)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:788)
+		at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:648)
+		at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:645)
+		at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:319)
+		at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:266)
+		at com.mongodb.internal.connection.InternalStreamConnection.readAsync(InternalStreamConnection.java:645)
+		at com.mongodb.internal.connection.InternalStreamConnection.access$600(InternalStreamConnection.java:89)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:778)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:763)
+		at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:648)
+		at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:645)
+		at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:319)
+		at com.mongodb.connection.netty.NettyStream.handleReadResponse(NettyStream.java:347)
+		at com.mongodb.connection.netty.NettyStream.access$1100(NettyStream.java:105)
+		at com.mongodb.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:421)
+		at com.mongodb.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:418)
+		at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-04-19 21:54:04,994] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-4, requestId=20fe6390-d455-48f3-8424-8725b2cf1764 - boundedElastic-4: Cloning the repo from the remote git@github.com:sunaqii/CS3200_final_UI.git
+[2024-04-19 21:54:06,649] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-4, requestId=20fe6390-d455-48f3-8424-8725b2cf1764 - Execute time: JGIT git_clone, appId 6622e7ba94737e34ee40ac82, Time elapsed: 1656ms
+[2024-04-19 21:54:06,656] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-4, requestId=20fe6390-d455-48f3-8424-8725b2cf1764 - 
+com.appsmith.server.exceptions.AppsmithException: The remote repository is not empty. Please create a new empty repository and configure the SSH keys. If you wish to clone and build an application from an existing remote repository, please use the "Import from a Git repository" option in the home page.
+	at com.appsmith.server.services.ce.GitServiceCEImpl.lambda$connectApplicationToGit$45(GitServiceCEImpl.java:826)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Handler com.appsmith.server.controllers.GitController#connectApplicationToRemoteRepo(String, GitConnectDTO, String) [DispatcherHandler]
+Original Stack Trace:
+		at com.appsmith.server.services.ce.GitServiceCEImpl.lambda$connectApplicationToGit$45(GitServiceCEImpl.java:826)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:132)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:293)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:474)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1839)
+		at reactor.core.publisher.MonoCacheTime.subscribeOrReturn(MonoCacheTime.java:151)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.request(MonoZip.java:216)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2341)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onSubscribe(FluxOnErrorResume.java:74)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onSubscribe(MDCConfig.java:54)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:117)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onSubscribe(MDCConfig.java:54)
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:125)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:293)
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:474)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.onNext(MonoSubscribeOn.java:146)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxTap$TapSubscriber.onNext(FluxTap.java:226)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+		at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:180)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoCallable$MonoCallableSubscription.request(MonoCallable.java:156)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2305)
+		at reactor.core.publisher.SerializedSubscriber.request(SerializedSubscriber.java:151)
+		at reactor.core.publisher.FluxTap$TapSubscriber.request(FluxTap.java:307)
+		at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.trySchedule(MonoSubscribeOn.java:189)
+		at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.onSubscribe(MonoSubscribeOn.java:134)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onSubscribe(MDCConfig.java:54)
+		at reactor.core.publisher.FluxTap$TapSubscriber.onSubscribe(FluxTap.java:201)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onSubscribe(MDCConfig.java:54)
+		at reactor.core.publisher.SerializedSubscriber.onSubscribe(SerializedSubscriber.java:65)
+		at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onSubscribe(FluxTimeout.java:154)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onSubscribe(MDCConfig.java:54)
+		at reactor.core.publisher.MonoCallable.subscribe(MonoCallable.java:48)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.run(MonoSubscribeOn.java:126)
+		at io.sentry.spring.jakarta.webflux.SentryScheduleHook.lambda$apply$0(SentryScheduleHook.java:22)
+		at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84)
+		at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-04-19 21:54:06,912]  - [e2b3d93a-1, L:/172.19.0.3:50018 ! R:github.com/140.82.116.4:443] An exception has been observed post termination, use DEBUG level to see the full stack: reactor.netty.http.client.PrematureCloseException: Connection prematurely closed DURING response
+[2024-04-19 21:57:03,614] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-5, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - boundedElastic-5: Cloning the repo from the remote git@github.com:sunaqii/CS3200_final_UI.git
+[2024-04-19 21:57:04,700] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-5, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Execute time: JGIT git_clone, appId 6622e7ba94737e34ee40ac82, Time elapsed: 1087ms
+[2024-04-19 21:57:04,802] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - time to import custom jslibs: 0
+[2024-04-19 21:57:04,822] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - time to create or update application object: 19
+[2024-04-19 21:57:04,827] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - time to get plugin map: 4
+[2024-04-19 21:57:04,835] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-5, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Time taken to import datasources: 4 ms
+[2024-04-19 21:57:04,842] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Importing page: Page1
+[2024-04-19 21:57:04,848] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - time to import 2 pages: 11
+[2024-04-19 21:57:04,849] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - New pages imported for application: 6622e7ba94737e34ee40ac82
+[2024-04-19 21:57:04,865] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Saving actions in bulk. New: 0, Updated: 0
+[2024-04-19 21:57:04,866] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - time to import 0 actions: 8 ms
+[2024-04-19 21:57:04,866] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Actions imported. result: existing actions: 0, imported actions: 0
+[2024-04-19 21:57:04,867] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Importing action collections
+[2024-04-19 21:57:04,874] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Saving action collections in bulk. New: 0, Updated: 0
+[2024-04-19 21:57:04,876] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Action collections imported. artifactId 6622e7ba94737e34ee40ac82, result: existing action collections: 0, imported action collections: 0
+[2024-04-19 21:57:04,883] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Updated actions with imported collection ids. artifactId 6622e7ba94737e34ee40ac82
+[2024-04-19 21:57:04,883] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Deleting 0 action collections which are no more used
+[2024-04-19 21:57:04,890] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Imported application with id 6622e7ba94737e34ee40ac82
+[2024-04-19 21:57:04,956] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Execute time: import, Time elapsed: 183ms
+[2024-04-19 21:57:04,965] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-6, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Trying to commit to local repo path, /appsmith-stacks/git-storage/6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 21:57:05,005] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-6, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Execute time: JGIT git_commit, appId 6622e7ba94737e34ee40ac82, Time elapsed: 39ms
+[2024-04-19 21:57:05,166] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-5, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 18ms
+[2024-04-19 21:57:05,168] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - boundedElastic-7: Switching to the branch master
+[2024-04-19 21:57:05,178] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-5, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 7ms
+[2024-04-19 21:57:05,198] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-5, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Execute time: FS application save, Time elapsed: 52ms
+[2024-04-19 21:57:05,200] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Trying to commit to local repo path, /appsmith-stacks/git-storage/6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 21:57:05,229] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Execute time: JGIT git_commit, appId 6622e7ba94737e34ee40ac82, Time elapsed: 28ms
+[2024-04-19 21:57:05,236] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - boundedElastic-7: Switching to the branch master
+[2024-04-19 21:57:05,239] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-5, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - boundedElastic-5: pushing changes to remote git@github.com:sunaqii/CS3200_final_UI.git
+[2024-04-19 21:57:05,292]  - [18922b42-1, L:/172.19.0.3:35060 ! R:github.com/140.82.116.4:443] An exception has been observed post termination, use DEBUG level to see the full stack: reactor.netty.http.client.PrematureCloseException: Connection prematurely closed DURING response
+[2024-04-19 21:57:06,624] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-5, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Execute time: JGIT git_push, appId 6622e7ba94737e34ee40ac82, Time elapsed: 1385ms
+[2024-04-19 21:57:06,686] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=d1d1a886-4c9c-4722-a5e7-5bac302ccd0a - Published application 6622e7ba94737e34ee40ac82 in 57 ms
+[2024-04-19 21:57:06,834] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - Going to get status for default application 6622e7ba94737e34ee40ac82, branch master
+[2024-04-19 21:57:06,865] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=3cf3606c-bf8d-4bd0-a6d8-610579448b04 - Going to get branch list for application 6622e7ba94737e34ee40ac82
+[2024-04-19 21:57:06,879] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-5, requestId=3cf3606c-bf8d-4bd0-a6d8-610579448b04 - boundedElastic-5: Get branches for the application 6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 21:57:06,934] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 22ms
+[2024-04-19 21:57:06,935] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-8, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - boundedElastic-8: Switching to the branch master
+[2024-04-19 21:57:06,954] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 13ms
+[2024-04-19 21:57:06,959] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - Execute time: FS application save, Time elapsed: 50ms
+[2024-04-19 21:57:06,971] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=9a07d19d-68c9-41ff-9a5c-f347c9b3b43e - Going to get snapshot with application id: 6622e7ba94737e34ee40ac82, branch: master
+[2024-04-19 21:57:07,116]  - [8d7fa95a-1, L:/172.19.0.3:35072 ! R:github.com/140.82.116.4:443] An exception has been observed post termination, use DEBUG level to see the full stack: reactor.netty.http.client.PrematureCloseException: Connection prematurely closed DURING response
+[2024-04-19 21:57:08,242] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-6, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - Execute time: JGIT git_fetch, appId 6622e7ba94737e34ee40ac82, Time elapsed: 1330ms
+[2024-04-19 21:57:08,247] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - boundedElastic-7: Get status for repo  /appsmith-stacks/git-storage/6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI, branch master
+[2024-04-19 21:57:08,260] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - Execute time: JGIT git_status, appId 6622e7ba94737e34ee40ac82, Time elapsed: 17ms
+[2024-04-19 21:57:08,275] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-6, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 12ms
+[2024-04-19 21:57:08,276] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-7, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - boundedElastic-7: Switching to the branch master
+[2024-04-19 21:57:08,288] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-6, requestId=be22e530-8613-41f1-b298-e127fb2e91e2 - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 9ms
+[2024-04-19 22:00:04,984] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=reactor-http-nio-5, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Going to create a branch from root application 6622e7ba94737e34ee40ac82, srcBranch master
+[2024-04-19 22:00:05,001] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - boundedElastic-9: Switching to the branch master
+[2024-04-19 22:00:06,354] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Execute time: JGIT git_fetch, appId 6622e7ba94737e34ee40ac82, Time elapsed: 1347ms
+[2024-04-19 22:00:06,356] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - boundedElastic-9: Get branches for the application 6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 22:00:06,367] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=c096fea8-9980-408c-9d9e-932594efa690 - boundedElastic-10: Creating branch  ASfor the repo 6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 22:00:06,403] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Execute time: JGIT git_create_branch, appId 6622e7ba94737e34ee40ac82, Time elapsed: 37ms
+[2024-04-19 22:00:06,431] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - time to import custom jslibs: 0
+[2024-04-19 22:00:06,439] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - time to create or update application object: 8
+[2024-04-19 22:00:06,441] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - time to get plugin map: 2
+[2024-04-19 22:00:06,443] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Time taken to import datasources: 2 ms
+[2024-04-19 22:00:06,445] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Importing page: Page1
+[2024-04-19 22:00:06,451] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=c096fea8-9980-408c-9d9e-932594efa690 - time to import 2 pages: 8
+[2024-04-19 22:00:06,452] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=c096fea8-9980-408c-9d9e-932594efa690 - New pages imported for application: 6622e96694737e34ee40ac88
+[2024-04-19 22:00:06,454] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Saving actions in bulk. New: 0, Updated: 0
+[2024-04-19 22:00:06,454] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=c096fea8-9980-408c-9d9e-932594efa690 - time to import 0 actions: 2 ms
+[2024-04-19 22:00:06,454] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Actions imported. result: existing actions: 0, imported actions: 0
+[2024-04-19 22:00:06,454] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Importing action collections
+[2024-04-19 22:00:06,456] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Saving action collections in bulk. New: 0, Updated: 0
+[2024-04-19 22:00:06,457] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Action collections imported. artifactId 6622e96694737e34ee40ac88, result: existing action collections: 0, imported action collections: 0
+[2024-04-19 22:00:06,458] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Updated actions with imported collection ids. artifactId 6622e96694737e34ee40ac88
+[2024-04-19 22:00:06,458] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Deleting 0 action collections which are no more used
+[2024-04-19 22:00:06,461] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Imported application with id 6622e96694737e34ee40ac88
+[2024-04-19 22:00:06,495] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-7, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Execute time: import, Time elapsed: 66ms
+[2024-04-19 22:00:06,930] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 18ms
+[2024-04-19 22:00:06,931] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=c096fea8-9980-408c-9d9e-932594efa690 - boundedElastic-11: Switching to the branch AS
+[2024-04-19 22:00:06,951] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 17ms
+[2024-04-19 22:00:06,955] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Execute time: FS application save, Time elapsed: 46ms
+[2024-04-19 22:00:06,956] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Trying to commit to local repo path, /appsmith-stacks/git-storage/6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 22:00:06,978] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=c096fea8-9980-408c-9d9e-932594efa690 - boundedElastic-11: Switching to the branch AS
+[2024-04-19 22:00:06,980] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - boundedElastic-9: pushing changes to remote git@github.com:sunaqii/CS3200_final_UI.git
+[2024-04-19 22:00:08,278] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Execute time: JGIT git_push, appId 6622e7ba94737e34ee40ac82, Time elapsed: 1297ms
+[2024-04-19 22:00:08,330] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=c096fea8-9980-408c-9d9e-932594efa690 - Published application 6622e96694737e34ee40ac88 in 47 ms
+[2024-04-19 22:00:08,388] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=488a8435-1a96-4030-9a32-04412c37fda1 - Going to get branch list for application 6622e7ba94737e34ee40ac82
+[2024-04-19 22:00:08,397] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=488a8435-1a96-4030-9a32-04412c37fda1 - boundedElastic-9: Get branches for the application 6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 22:00:08,440] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=72cb733f-0a02-4fba-91f0-c514bcb417f3 - Going to checkout to branch AS application 6622e7ba94737e34ee40ac82 
+[2024-04-19 22:00:08,510] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=60c69f6f-2a69-4fb7-a08d-7fb288a7a85e - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: 6622e7ba94737e34ee40ac85, branchName: AS, mode: EDIT
+[2024-04-19 22:00:08,528] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-9, requestId=60c69f6f-2a69-4fb7-a08d-7fb288a7a85e - Retrieved possible application ids for page, picking the appropriate one now
+[2024-04-19 22:00:08,545] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-5, requestId=60c69f6f-2a69-4fb7-a08d-7fb288a7a85e - Fetched application data for id: 6622e96694737e34ee40ac88
+[2024-04-19 22:00:08,558] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=60c69f6f-2a69-4fb7-a08d-7fb288a7a85e - Retrieved Page DTOs from DB ...
+[2024-04-19 22:00:08,558] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=60c69f6f-2a69-4fb7-a08d-7fb288a7a85e - Populating applicationPagesDTO ...
+[2024-04-19 22:00:08,564] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=60c69f6f-2a69-4fb7-a08d-7fb288a7a85e - Fetching plugins by params: {workspaceId=[6622e7ba94737e34ee40ac7d]} for org: wisub's apps
+[2024-04-19 22:00:08,650] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=8488ddff-8c18-4be5-b253-1c936c6f8be4 - Going to get branch list for application 6622e7ba94737e34ee40ac82
+[2024-04-19 22:00:08,655] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=b08b0f95-090e-47ca-ab91-0963a4884749 - Going to get snapshot with application id: 6622e7ba94737e34ee40ac82, branch: AS
+[2024-04-19 22:00:08,680] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - Going to get status for default application 6622e7ba94737e34ee40ac82, branch AS
+[2024-04-19 22:00:08,691] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=8488ddff-8c18-4be5-b253-1c936c6f8be4 - boundedElastic-9: Get branches for the application 6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 22:00:08,758] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 24ms
+[2024-04-19 22:00:08,759] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-12, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - boundedElastic-12: Switching to the branch AS
+[2024-04-19 22:00:08,770] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=8f59a9f7-638d-49d3-811d-4ae43316182b - Going to get resource from base controller for id: 6622e7ba94737e34ee40ac7d
+[2024-04-19 22:00:08,798] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 37ms
+[2024-04-19 22:00:08,801] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - Execute time: FS application save, Time elapsed: 71ms
+[2024-04-19 22:00:08,846]  - [da28e095-1, L:/172.19.0.3:50494 ! R:github.com/140.82.116.4:443] An exception has been observed post termination, use DEBUG level to see the full stack: reactor.netty.http.client.PrematureCloseException: Connection prematurely closed DURING response
+[2024-04-19 22:00:09,701] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - Execute time: JGIT git_fetch, appId 6622e7ba94737e34ee40ac82, Time elapsed: 973ms
+[2024-04-19 22:00:09,705] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - boundedElastic-10: Get status for repo  /appsmith-stacks/git-storage/6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI, branch AS
+[2024-04-19 22:00:09,721] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - Execute time: JGIT git_status, appId 6622e7ba94737e34ee40ac82, Time elapsed: 19ms
+[2024-04-19 22:00:09,740] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 16ms
+[2024-04-19 22:00:09,741] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - boundedElastic-10: Switching to the branch AS
+[2024-04-19 22:00:09,754] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=d23cc458-fab1-468d-bc95-7d538e4da9ea - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 10ms
+[2024-04-19 22:00:15,724] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=21217f4c-d75d-4987-9c1b-e93c056ed80a - Going to checkout to branch master application 6622e7ba94737e34ee40ac82 
+[2024-04-19 22:00:15,790] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=5283cc38-bc89-4581-8557-2b5ccea97a80 - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: 6622e7ba94737e34ee40ac85, branchName: master, mode: EDIT
+[2024-04-19 22:00:15,800] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-10, requestId=5283cc38-bc89-4581-8557-2b5ccea97a80 - Retrieved possible application ids for page, picking the appropriate one now
+[2024-04-19 22:00:15,809] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-11, requestId=5283cc38-bc89-4581-8557-2b5ccea97a80 - Fetched application data for id: 6622e7ba94737e34ee40ac82
+[2024-04-19 22:00:15,819] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-11, requestId=5283cc38-bc89-4581-8557-2b5ccea97a80 - Retrieved Page DTOs from DB ...
+[2024-04-19 22:00:15,820] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-11, requestId=5283cc38-bc89-4581-8557-2b5ccea97a80 - Populating applicationPagesDTO ...
+[2024-04-19 22:00:15,823] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-11, requestId=5283cc38-bc89-4581-8557-2b5ccea97a80 - Fetching plugins by params: {workspaceId=[6622e7ba94737e34ee40ac7d]} for org: wisub's apps
+[2024-04-19 22:00:15,875] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=a34345b2-de4a-4556-a90c-8970e3ec975d - Going to get branch list for application 6622e7ba94737e34ee40ac82
+[2024-04-19 22:00:15,880] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - Going to get status for default application 6622e7ba94737e34ee40ac82, branch master
+[2024-04-19 22:00:15,885] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=40d8a7aa-6d39-4d0e-8467-1358675521d1 - Going to get snapshot with application id: 6622e7ba94737e34ee40ac82, branch: master
+[2024-04-19 22:00:15,903] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=a34345b2-de4a-4556-a90c-8970e3ec975d - boundedElastic-11: Get branches for the application 6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 22:00:15,951] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 14ms
+[2024-04-19 22:00:15,952] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-12, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - boundedElastic-12: Switching to the branch master
+[2024-04-19 22:00:15,961] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=927461e8-4417-4bca-b9c8-a3396a952d97 - Going to get resource from base controller for id: 6622e7ba94737e34ee40ac7d
+[2024-04-19 22:00:15,969] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-12, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - Execute time: JGIT git_checkout, appId 6622e7ba94737e34ee40ac82, Time elapsed: 17ms
+[2024-04-19 22:00:15,980] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 10ms
+[2024-04-19 22:00:15,982] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - Execute time: FS application save, Time elapsed: 46ms
+[2024-04-19 22:00:16,959] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - Execute time: JGIT git_fetch, appId 6622e7ba94737e34ee40ac82, Time elapsed: 1021ms
+[2024-04-19 22:00:16,967] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - boundedElastic-10: Get status for repo  /appsmith-stacks/git-storage/6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI, branch master
+[2024-04-19 22:00:16,982] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - Execute time: JGIT git_status, appId 6622e7ba94737e34ee40ac82, Time elapsed: 22ms
+[2024-04-19 22:00:16,999] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 14ms
+[2024-04-19 22:00:17,000] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - boundedElastic-10: Switching to the branch master
+[2024-04-19 22:00:17,015] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=b6dc53fa-10b7-4089-97da-5212eb888dcd - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 10ms
+[2024-04-19 22:00:22,257] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=0cdd396b-bd39-4983-9b15-20655ee909b2 - Going to checkout to branch AS application 6622e7ba94737e34ee40ac82 
+[2024-04-19 22:00:22,330] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=a61d69e7-4113-48d0-a9bf-f0cb9160a4be - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: 6622e7ba94737e34ee40ac85, branchName: AS, mode: EDIT
+[2024-04-19 22:00:22,340] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-10, requestId=a61d69e7-4113-48d0-a9bf-f0cb9160a4be - Retrieved possible application ids for page, picking the appropriate one now
+[2024-04-19 22:00:22,350] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-8, requestId=a61d69e7-4113-48d0-a9bf-f0cb9160a4be - Fetched application data for id: 6622e96694737e34ee40ac88
+[2024-04-19 22:00:22,362] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=a61d69e7-4113-48d0-a9bf-f0cb9160a4be - Retrieved Page DTOs from DB ...
+[2024-04-19 22:00:22,362] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=a61d69e7-4113-48d0-a9bf-f0cb9160a4be - Populating applicationPagesDTO ...
+[2024-04-19 22:00:22,366] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=nioEventLoopGroup-3-4, requestId=a61d69e7-4113-48d0-a9bf-f0cb9160a4be - Fetching plugins by params: {workspaceId=[6622e7ba94737e34ee40ac7d]} for org: wisub's apps
+[2024-04-19 22:00:22,411] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - Going to get status for default application 6622e7ba94737e34ee40ac82, branch AS
+[2024-04-19 22:00:22,416] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=97770309-9165-4912-bcfb-a2d356c2f855 - Going to get branch list for application 6622e7ba94737e34ee40ac82
+[2024-04-19 22:00:22,433] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=5852d6eb-ccd1-48f9-81ed-6dc3a52b8c80 - Going to get snapshot with application id: 6622e7ba94737e34ee40ac82, branch: AS
+[2024-04-19 22:00:22,437] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-9, requestId=97770309-9165-4912-bcfb-a2d356c2f855 - boundedElastic-9: Get branches for the application 6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI
+[2024-04-19 22:00:22,483] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 18ms
+[2024-04-19 22:00:22,484] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-12, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - boundedElastic-12: Switching to the branch AS
+[2024-04-19 22:00:22,494] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=lettuce-nioEventLoop-10-1, requestId=1d84a9e1-cd4c-488c-a133-e17367cea14a - Going to get resource from base controller for id: 6622e7ba94737e34ee40ac7d
+[2024-04-19 22:00:22,497] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-12, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - Execute time: JGIT git_checkout, appId 6622e7ba94737e34ee40ac82, Time elapsed: 14ms
+[2024-04-19 22:00:22,511] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 12ms
+[2024-04-19 22:00:22,516] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - Execute time: FS application save, Time elapsed: 52ms
+[2024-04-19 22:00:23,598] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - Execute time: JGIT git_fetch, appId 6622e7ba94737e34ee40ac82, Time elapsed: 1132ms
+[2024-04-19 22:00:23,603] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - boundedElastic-10: Get status for repo  /appsmith-stacks/git-storage/6622e7ba94737e34ee40ac7d/6622e7ba94737e34ee40ac82/CS3200_final_UI, branch AS
+[2024-04-19 22:00:23,621] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - Execute time: JGIT git_status, appId 6622e7ba94737e34ee40ac82, Time elapsed: 22ms
+[2024-04-19 22:00:23,641] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 17ms
+[2024-04-19 22:00:23,642] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-10, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - boundedElastic-10: Switching to the branch AS
+[2024-04-19 22:00:23,657] userEmail=wisub@gs.com, sessionId=9f728c12-563e-4d59-a9a4-15adf7a5a24f, thread=boundedElastic-11, requestId=e24e322d-281e-4840-9fa2-de884c381d8e - Execute time: JGIT git_reset, appId 6622e7ba94737e34ee40ac82, Time elapsed: 11ms
+[2024-04-19 22:19:23,940]  - Fetching features for default tenant
+[2024-04-19 22:23:12,051]  - LEAK: ByteBuf.release() was not called before it's garbage-collected. See https://netty.io/wiki/reference-counted-objects.html for more information.
+Recent access records: 
+Created at:
+	io.netty.buffer.PooledByteBufAllocator.newDirectBuffer(PooledByteBufAllocator.java:407)
+	io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:188)
+	io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:179)
+	io.netty.buffer.AbstractByteBufAllocator.buffer(AbstractByteBufAllocator.java:116)
+	io.netty.handler.ssl.SslHandler.allocate(SslHandler.java:2267)
+	io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1348)
+	io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1246)
+	io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1295)
+	io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529)
+	io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468)
+	io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	java.base/java.lang.Thread.run(Thread.java:840)
+[2024-04-19 22:23:12,052]  - LEAK: ByteBuf.release() was not called before it's garbage-collected. See https://netty.io/wiki/reference-counted-objects.html for more information.
+Recent access records: 
+Created at:
+	io.netty.buffer.SimpleLeakAwareByteBuf.unwrappedDerived(SimpleLeakAwareByteBuf.java:144)
+	io.netty.buffer.SimpleLeakAwareByteBuf.readRetainedSlice(SimpleLeakAwareByteBuf.java:67)
+	io.netty.handler.codec.http.HttpObjectDecoder.decode(HttpObjectDecoder.java:406)
+	io.netty.handler.codec.http.HttpClientCodec$Decoder.decode(HttpClientCodec.java:239)
+	io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529)
+	io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468)
+	io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1383)
+	io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1246)
+	io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1295)
+	io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529)
+	io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468)
+	io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	java.base/java.lang.Thread.run(Thread.java:840)

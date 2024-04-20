@@ -1,0 +1,880 @@
+Load environment configuration
+Waiting for RTS to start ...
+{"success":true}RTS started.
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@6659c656]
+SLF4J: Found provider [org.slf4j.reload4j.Reload4jServiceProvider@6d5380c2]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [ch.qos.logback.classic.spi.LogbackServiceProvider@6659c656]
+[2024-04-19 21:36:22,228]  - Starting ServerApplication vv1.21 using Java 17.0.9 with PID 1754 (/opt/appsmith/backend/server.jar started by root in /opt/appsmith/backend)
+[2024-04-19 21:36:22,229]  - Running with Spring Boot v3.0.9, Spring v6.0.11
+[2024-04-19 21:36:22,229]  - The following 1 profile is active: "production"
+[2024-04-19 21:36:23,432]  - Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-04-19 21:36:23,435]  - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+[2024-04-19 21:36:23,648]  - Finished Spring Data repository scanning in 206 ms. Found 44 Reactive MongoDB repository interfaces.
+[2024-04-19 21:36:24,722]  - Application started with build version v1.21, and commitSha 00e11e8800f05b82cc5e794e3730c523e6e32729
+[2024-04-19 21:36:24,989]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.8.2"}, "os": {"type": "Linux", "name": "Linux", "architecture": "aarch64", "version": "6.6.12-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.9+9"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@77c7ed8e, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@46d8f407], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@453d496b]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@320494b6], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+[2024-04-19 21:36:25,085]  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=47873875, setName='mr1', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000002, setVersion=1, topologyVersion=TopologyVersion{processId=6622e3d42cba011a164f1cbe, counter=6}, lastWriteDate=Fri Apr 19 21:36:21 UTC 2024, lastUpdateTimeNanos=317776531518}
+[2024-04-19 21:36:26,049]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Linux", "name": "Linux", "architecture": "aarch64", "version": "6.6.12-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.9+9"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@78d71df1, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@46d8f407], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@453d496b]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@320494b6], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+[2024-04-19 21:36:26,061]  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=12343958, setName='mr1', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000002, setVersion=1, topologyVersion=TopologyVersion{processId=6622e3d42cba011a164f1cbe, counter=6}, lastWriteDate=Fri Apr 19 21:36:21 UTC 2024, lastUpdateTimeNanos=318754373643}
+[2024-04-19 21:36:26,172]  - Enabled plugins: []
+[2024-04-19 21:36:26,172]  - Disabled plugins: []
+[2024-04-19 21:36:26,174]  - PF4J version 3.10.0 in 'deployment' mode
+[2024-04-19 21:36:26,356]  - Plugin 'appsmithai-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'saas-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'google-sheets-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'js-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'oracle-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'smtp-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'amazons3-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'mysql-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'restapi-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'postgres-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'googleai-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'snowflake-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'anthropic-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'elasticsearch-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'mssql-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'redshift-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'databricks-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'mongo-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'graphql-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'aws-lambda-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'openai-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'dynamo-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'arangodb-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'redis-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Plugin 'firestore-plugin@1.0-SNAPSHOT' resolved
+[2024-04-19 21:36:26,357]  - Start plugin 'appsmithai-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,365]  - Start plugin 'saas-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,365]  - Start plugin 'google-sheets-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,397]  - Start plugin 'js-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,398]  - Start plugin 'oracle-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,403]  - Start plugin 'smtp-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,406]  - Start plugin 'amazons3-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,412]  - Start plugin 'mysql-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,418]  - Start plugin 'restapi-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,422]  - Start plugin 'postgres-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,426]  - Start plugin 'googleai-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,426]  - Start plugin 'snowflake-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,435]  - Start plugin 'anthropic-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,435]  - Start plugin 'elasticsearch-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,436]  - Start plugin 'mssql-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,439]  - Start plugin 'redshift-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,444]  - Start plugin 'databricks-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,447]  - Start plugin 'mongo-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,449]  - Start plugin 'graphql-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,449]  - Start plugin 'aws-lambda-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,464]  - Start plugin 'openai-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,469]  - Start plugin 'dynamo-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,473]  - Start plugin 'arangodb-plugin@1.0-SNAPSHOT'
+[2024-04-19 21:36:26,475]  - Start plugin 'redis-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:26,478]  - Start plugin 'firestore-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2024-04-19 21:36:27,798]  - Mongock runner COMMUNITY version[5.1.6]
+[2024-04-19 21:36:27,798]  - Running Mongock with NO metadata
+[2024-04-19 21:36:27,798]  - Property transaction-enabled not provided. It will become true as default in next versions. Set explicit value to false in case transaction are not desired.
+[2024-04-19 21:36:27,798]  - Property transaction-enabled not provided and is unknown if driver is transactionable. BY DEFAULT MONGOCK WILL RUN IN NO-TRANSACTION MODE.
+[2024-04-19 21:36:27,865]  - Reflections took 57 ms to scan 1 urls, producing 5 keys and 60 values
+[2024-04-19 21:36:27,883]  - Reflections took 11 ms to scan 1 urls, producing 5 keys and 60 values
+[2024-04-19 21:36:28,017]  - Mongock trying to acquire the lock
+[2024-04-19 21:36:28,029]  - Mongock acquired the lock until: Fri Apr 19 21:37:28 UTC 2024
+[2024-04-19 21:36:28,030]  - Starting mongock lock daemon...
+[2024-04-19 21:36:28,032]  - Mongock starting the data migration sequence id[2024-04-19T21:36:27.764511550-318]...
+[2024-04-19 21:36:28,061]  - method[initializeSchemaVersion] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,096]  - APPLIED - {"id"="initialize-schema-version", "type"="execution", "author"="", "class"="DatabaseChangelog0", "method"="initializeSchemaVersion"}
+[2024-04-19 21:36:28,099]  - method[initialPlugins] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,117]  - APPLIED - {"id"="initial-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="initialPlugins"}
+[2024-04-19 21:36:28,120]  - method[addInitialIndexes] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,727]  - APPLIED - {"id"="initial-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addInitialIndexes"}
+[2024-04-19 21:36:28,730]  - method[setInitialSequenceForDatasource] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,738]  - APPLIED - {"id"="set-initial-sequence-for-datasource", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setInitialSequenceForDatasource"}
+[2024-04-19 21:36:28,740]  - method[setPluginImageAndDocsLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,755]  - APPLIED - {"id"="set-plugin-image-and-docs-link", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setPluginImageAndDocsLink"}
+[2024-04-19 21:36:28,757]  - method[mysqlPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,764]  - APPLIED - {"id"="install-mysql-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="mysqlPlugin"}
+[2024-04-19 21:36:28,766]  - method[updateDatabaseDocumentationLinks] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,773]  - APPLIED - {"id"="update-database-documentation-links", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateDatabaseDocumentationLinks"}
+[2024-04-19 21:36:28,775]  - method[generateUniqueIdForInstance] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,778]  - APPLIED - {"id"="generate-unique-id-for-instance", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="generateUniqueIdForInstance"}
+[2024-04-19 21:36:28,781]  - method[fixTokenExpiration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,794]  - APPLIED - {"id"="fix-password-reset-token-expiration", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="fixTokenExpiration"}
+[2024-04-19 21:36:28,796]  - method[addElasticSearchPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,799]  - APPLIED - {"id"="add-elastic-search-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addElasticSearchPlugin"}
+[2024-04-19 21:36:28,801]  - method[addDynamoPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,804]  - APPLIED - {"id"="add-dynamo-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addDynamoPlugin"}
+[2024-04-19 21:36:28,806]  - method[usePngLogos] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,809]  - APPLIED - {"id"="use-png-logos", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="usePngLogos"}
+[2024-04-19 21:36:28,811]  - method[addRedisPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,814]  - APPLIED - {"id"="add-redis-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addRedisPlugin"}
+[2024-04-19 21:36:28,816]  - method[addMsSqlPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,819]  - APPLIED - {"id"="add-msSql-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addMsSqlPlugin"}
+[2024-04-19 21:36:28,822]  - method[addNewPageIndexAfterDroppingNewPage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,834]  - APPLIED - {"id"="createNewPageIndexAfterDroppingNewPage", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewPageIndexAfterDroppingNewPage"}
+[2024-04-19 21:36:28,836]  - method[addNewActionIndexAfterDroppingNewAction] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,845]  - APPLIED - {"id"="createNewActionIndexAfterDroppingNewAction", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewActionIndexAfterDroppingNewAction"}
+[2024-04-19 21:36:28,847]  - method[addNewPageAndNewActionNewIndexes] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,855]  - APPLIED - {"id"="new-page-new-action-add-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewPageAndNewActionNewIndexes"}
+[2024-04-19 21:36:28,857]  - method[updateActionIndexToSingleMultipleIndices] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,867]  - APPLIED - {"id"="update-action-index-to-single-multiple-indices", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateActionIndexToSingleMultipleIndices"}
+[2024-04-19 21:36:28,869]  - method[addFirestorePlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,872]  - APPLIED - {"id"="add-firestore-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addFirestorePlugin"}
+[2024-04-19 21:36:28,874]  - method[addRedshiftPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,877]  - APPLIED - {"id"="add-redshift-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addRedshiftPlugin"}
+[2024-04-19 21:36:28,879]  - method[clearUserDataCollection] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,880]  - APPLIED - {"id"="clear-userdata-collection", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="clearUserDataCollection"}
+[2024-04-19 21:36:28,881]  - method[updateDatabaseDocumentationLinks_v1_2_1] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,895]  - APPLIED - {"id"="update-database-documentation-links-v1-2-1", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateDatabaseDocumentationLinks_v1_2_1"}
+[2024-04-19 21:36:28,896]  - method[addAmazonS3Plugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,899]  - APPLIED - {"id"="add-amazons3-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addAmazonS3Plugin"}
+[2024-04-19 21:36:28,901]  - method[updatePluginDatasourceFormComponents] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,925]  - APPLIED - {"id"="update-plugin-datasource-form-components", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updatePluginDatasourceFormComponents"}
+[2024-04-19 21:36:28,926]  - method[updateS3DatasourceConfigurationAndLabel] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,930]  - APPLIED - {"id"="update-s3-datasource-configuration-and-label", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateS3DatasourceConfigurationAndLabel"}
+[2024-04-19 21:36:28,931]  - method[addGoogleSheetsPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,934]  - APPLIED - {"id"="add-google-sheets-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addGoogleSheetsPlugin"}
+[2024-04-19 21:36:28,936]  - method[markInstanceAsUnregistered] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,938]  - APPLIED - {"id"="mark-instance-unregistered", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="markInstanceAsUnregistered"}
+[2024-04-19 21:36:28,940]  - method[addSnowflakePlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,943]  - APPLIED - {"id"="add-snowflake-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addSnowflakePlugin"}
+[2024-04-19 21:36:28,944]  - method[addArangoDBPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,947]  - APPLIED - {"id"="add-arangodb-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addArangoDBPlugin"}
+[2024-04-19 21:36:28,948]  - method[setSvgLogoToPluginIcons] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,976]  - APPLIED - {"id"="set-svg-logo-to-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setSvgLogoToPluginIcons"}
+[2024-04-19 21:36:28,977]  - method[createPluginReferenceForGenerateCRUDPage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:28,996]  - APPLIED - {"id"="create-plugin-reference-for-genarate-CRUD-page", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createPluginReferenceForGenerateCRUDPage"}
+[2024-04-19 21:36:28,997]  - method[createPluginReferenceForS3AndGSheetGenerateCRUDPage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,013]  - APPLIED - {"id"="create-plugin-reference-for-S3-GSheet-genarate-CRUD-page", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createPluginReferenceForS3AndGSheetGenerateCRUDPage"}
+[2024-04-19 21:36:29,014]  - method[addJSPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,017]  - APPLIED - {"id"="add-js-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addJSPlugin"}
+[2024-04-19 21:36:29,018]  - method[updatePluginPackageNameIndexToPluginNamePackageNameAndVersion] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,128]  - APPLIED - {"id"="update-plugin-package-name-index", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updatePluginPackageNameIndexToPluginNamePackageNameAndVersion"}
+[2024-04-19 21:36:29,130]  - method[migrateS3PluginToUqi] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,133]  - APPLIED - {"id"="migrate-s3-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateS3PluginToUqi"}
+[2024-04-19 21:36:29,134]  - method[addSmtpPluginPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,138]  - APPLIED - {"id"="add-smtp-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addSmtpPluginPlugin"}
+[2024-04-19 21:36:29,139]  - method[addPluginNameForGoogleSheets] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,142]  - APPLIED - {"id"="add-google-sheets-plugin-name", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addPluginNameForGoogleSheets"}
+[2024-04-19 21:36:29,143]  - method[migrateFirestorePluginToUqi] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,145]  - APPLIED - {"id"="migrate-firestore-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePluginToUqi"}
+[2024-04-19 21:36:29,146]  - method[migrateFirestorePluginToUqi3] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,148]  - APPLIED - {"id"="migrate-firestore-to-uqi-3", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePluginToUqi3"}
+[2024-04-19 21:36:29,149]  - method[updateGitIndexes] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,167]  - APPLIED - {"id"="update-index-for-git", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateGitIndexes"}
+[2024-04-19 21:36:29,168]  - method[useAssetsCDNForPluginIcons] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,199]  - APPLIED - {"id"="use-assets-cdn-for-plugin-icons", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="useAssetsCDNForPluginIcons"}
+[2024-04-19 21:36:29,200]  - method[updateNewActionActionCollectionAndUserDataIndexes] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,210]  - APPLIED - {"id"="update-index-for-newAction-actionCollection-userData", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateNewActionActionCollectionAndUserDataIndexes"}
+[2024-04-19 21:36:29,211]  - method[markMSSQLCrudUnavailable] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,214]  - APPLIED - {"id"="mark-mssql-crud-unavailable", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="markMSSQLCrudUnavailable"}
+[2024-04-19 21:36:29,215]  - method[updateNewActionActionCollectionIndexes] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,231]  - APPLIED - {"id"="update-index-for-newAction-actionCollection", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateNewActionActionCollectionIndexes"}
+[2024-04-19 21:36:29,233]  - method[fixPluginTitleCasing] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,238]  - APPLIED - {"id"="fix-plugin-title-casing", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="fixPluginTitleCasing"}
+[2024-04-19 21:36:29,239]  - method[addIndexesForGit] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,252]  - APPLIED - {"id"="update-git-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addIndexesForGit"}
+[2024-04-19 21:36:29,266]  - method[addWorkspaceIndexes] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,274]  - APPLIED - {"id"="add-workspace-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addWorkspaceIndexes"}
+[2024-04-19 21:36:29,276]  - method[addDefaultTenant] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,286]  - APPLIED - {"id"="add-default-tenant", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addDefaultTenant"}
+[2024-04-19 21:36:29,287]  - method[organizationToWorkspaceIndexesRecreate] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,299]  - APPLIED - {"id"="organization-to-workspace-indexes-recreate", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="organizationToWorkspaceIndexesRecreate"}
+[2024-04-19 21:36:29,303]  - method[clearRedisCache2] with arguments: [org.springframework.data.redis.core.ReactiveRedisOperations]
+[2024-04-19 21:36:29,335]  - APPLIED - {"id"="flush-spring-redis-keys-2a", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="clearRedisCache2"}
+[2024-04-19 21:36:29,337]  - method[addAnonymousUser] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,346]  - APPLIED - {"id"="add-anonymousUser", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addAnonymousUser"}
+[2024-04-19 21:36:29,348]  - method[addInstanceConfigurationPlaceHolder] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,367]  - APPLIED - {"id"="add-instance-config-object", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addInstanceConfigurationPlaceHolder"}
+[2024-04-19 21:36:29,371]  - method[addAnonymousUserPermissionGroup] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,381]  - APPLIED - {"id"="add-anonymous-user-permission-group", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addAnonymousUserPermissionGroup"}
+[2024-04-19 21:36:29,383]  - method[createThemesIndices] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,401]  - APPLIED - {"id"="create-themes-indices", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="createThemesIndices"}
+[2024-04-19 21:36:29,404]  - method[createSystemThemes3] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,472]  - APPLIED - {"id"="create-system-themes-v3", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="createSystemThemes3"}
+[2024-04-19 21:36:29,474]  - method[addPermissionGroupIndex] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,585]  - APPLIED - {"id"="create-indices-on-permissions-for-performance", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addPermissionGroupIndex"}
+[2024-04-19 21:36:29,588]  - method[updateBadThemeState] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.acl.PolicyGenerator, com.appsmith.server.repositories.CacheableRepositoryHelper]
+[2024-04-19 21:36:29,590]  - APPLIED - {"id"="update-bad-theme-state", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateBadThemeState"}
+[2024-04-19 21:36:29,592]  - method[addTenantAdminPermissionsToInstanceAdmin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.solutions.PolicySolutionImpl]
+[2024-04-19 21:36:29,601]  - APPLIED - {"id"="add-tenant-admin-permissions-instance-admin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addTenantAdminPermissionsToInstanceAdmin"}
+[2024-04-19 21:36:29,602]  - method[addGraphQLPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,605]  - APPLIED - {"id"="add-graphql-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addGraphQLPlugin"}
+[2024-04-19 21:36:29,607]  - method[addIndicesRecommendedByMongoCloud] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,624]  - APPLIED - {"id"="indices-recommended-by-mongodb-cloud", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addIndicesRecommendedByMongoCloud"}
+[2024-04-19 21:36:29,625]  - method[addUniqueIndexOnUidString] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,633]  - APPLIED - {"id"="add-unique-index-for-uidstring", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addUniqueIndexOnUidString"}
+[2024-04-19 21:36:29,635]  - method[modifyReadPermissionGroupToReadPermissionGroupMembers] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.solutions.PolicySolutionImpl]
+[2024-04-19 21:36:29,637]  - APPLIED - {"id"="change-readPermissionGroup-to-readPermissionGroupMembers", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="modifyReadPermissionGroupToReadPermissionGroupMembers"}
+[2024-04-19 21:36:29,638]  - method[deletePermissionsInPermissionGroups] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,640]  - APPLIED - {"id"="delete-permissions-in-permissionGroups", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="deletePermissionsInPermissionGroups"}
+[2024-04-19 21:36:29,642]  - method[removeUsagePulsesForAppsmithCloud] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.configurations.CommonConfig$$SpringCGLIB$$0]
+[2024-04-19 21:36:29,642]  - APPLIED - {"id"="remove-usage-pulses-for-appsmith-cloud", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="removeUsagePulsesForAppsmithCloud"}
+[2024-04-19 21:36:29,643]  - method[addSslModeSettingsForExistingMssqlDatasource] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,646]  - APPLIED - {"id"="add-ssl-mode-settings-for-existing-mssql-datasources", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addSslModeSettingsForExistingMssqlDatasource"}
+[2024-04-19 21:36:29,648]  - method[addOraclePlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,651]  - APPLIED - {"id"="add-oracle-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addOraclePlugin"}
+[2024-04-19 21:36:29,653]  - method[updateOraclePluginName] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,656]  - APPLIED - {"id"="update-oracle-plugin-name", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateOraclePluginName"}
+[2024-04-19 21:36:29,660]  - method[updateSuperUsers] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.repositories.CacheableRepositoryHelper, com.appsmith.server.solutions.PolicySolution, com.appsmith.server.acl.PolicyGenerator]
+[2024-04-19 21:36:29,668]  - APPLIED - {"id"="update-super-users", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateSuperUsers"}
+[2024-04-19 21:36:29,671]  - method[com.appsmith.server.migrations.db.ce.Migration003AddInstanceNameToTenantConfiguration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,671]  - method[addInstanceNameEnvVarToTenantConfiguration] with arguments: []
+[2024-04-19 21:36:29,679]  - APPLIED - {"id"="add-instance-name-env-variable-tenant-configuration", "type"="execution", "author"="default_author", "class"="Migration003AddInstanceNameToTenantConfiguration", "method"="addInstanceNameEnvVarToTenantConfiguration"}
+[2024-04-19 21:36:29,681]  - method[com.appsmith.server.migrations.db.ce.Migration004PermissionGroupDefaultWorkspaceIdMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,681]  - method[defaultWorkspaceIdMigration] with arguments: []
+No permissionGroup data to migrate.
+[2024-04-19 21:36:29,683]  - APPLIED - {"id"="migrate-default-workspace-id-to-default-domain-id", "type"="execution", "author"="default_author", "class"="Migration004PermissionGroupDefaultWorkspaceIdMigration", "method"="defaultWorkspaceIdMigration"}
+[2024-04-19 21:36:29,684]  - method[com.appsmith.server.migrations.db.ce.Migration005CreateIndexForApplicationSnapshotMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,685]  - method[addIndexOnApplicationIdAndChunkOrder] with arguments: []
+[2024-04-19 21:36:29,696]  - APPLIED - {"id"="create-index-for-application-snapshot-collection", "type"="execution", "author"="default_author", "class"="Migration005CreateIndexForApplicationSnapshotMigration", "method"="addIndexOnApplicationIdAndChunkOrder"}
+[2024-04-19 21:36:29,698]  - method[com.appsmith.server.migrations.db.ce.Migration006ResetOnPageLoadEdgesInLayouts] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,698]  - method[executeMigration] with arguments: []
+[2024-04-19 21:36:29,701]  - APPLIED - {"id"="reset-on-page-load-edges-in-layouts", "type"="execution", "author"="default_author", "class"="Migration006ResetOnPageLoadEdgesInLayouts", "method"="executeMigration"}
+[2024-04-19 21:36:29,702]  - method[com.appsmith.server.migrations.db.ce.Migration007OptOutUnsupportedPluginsForAirGap] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,702]  - method[optOutUnsupportedPluginsForAirGapInstance] with arguments: []
+[2024-04-19 21:36:29,717]  - APPLIED - {"id"="opt-out-unsupported-plugins-airgap-instance", "type"="execution", "author"="default_author", "class"="Migration007OptOutUnsupportedPluginsForAirGap", "method"="optOutUnsupportedPluginsForAirGapInstance"}
+[2024-04-19 21:36:29,719]  - method[com.appsmith.server.migrations.db.ce.Migration008SupportNonHostedPluginsForAirgap] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,719]  - method[supportNonHostedPluginsForAirgap] with arguments: []
+[2024-04-19 21:36:29,730]  - APPLIED - {"id"="support-non-self-hosted-plugins-for-airgap", "type"="execution", "author"="default_author", "class"="Migration008SupportNonHostedPluginsForAirgap", "method"="supportNonHostedPluginsForAirgap"}
+[2024-04-19 21:36:29,733]  - method[com.appsmith.server.migrations.db.ce.Migration009UpdateOracleLogoToSVG] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,733]  - method[updateOracleLogoToSVG] with arguments: []
+[2024-04-19 21:36:29,736]  - APPLIED - {"id"="update-oracle-logo-to-svg", "type"="execution", "author"="default_author", "class"="Migration009UpdateOracleLogoToSVG", "method"="updateOracleLogoToSVG"}
+[2024-04-19 21:36:29,738]  - method[com.appsmith.server.migrations.db.ce.Migration010UpdatePluginDocsLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,738]  - method[updatePluginDocumentationLinks] with arguments: []
+[2024-04-19 21:36:29,767]  - APPLIED - {"id"="update-plugins-docs-link", "type"="execution", "author"="default_author", "class"="Migration010UpdatePluginDocsLink", "method"="updatePluginDocumentationLinks"}
+[2024-04-19 21:36:29,769]  - method[com.appsmith.server.migrations.db.ce.Migration011CreateIndexDefaultDomainIdDefaultDomainTypeDropIndexDefaultWorkspaceId] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,769]  - method[createNewIndexDefaultDomainIdDefaultDomainTypeAndDropOldIndexDefaultWorkspaceId] with arguments: []
+[2024-04-19 21:36:29,885]  - APPLIED - {"id"="create-index-default-domain-id-default-domain-type", "type"="execution", "author"="default_author", "class"="Migration011CreateIndexDefaultDomainIdDefaultDomainTypeDropIndexDefaultWorkspaceId", "method"="createNewIndexDefaultDomainIdDefaultDomainTypeAndDropOldIndexDefaultWorkspaceId"}
+[2024-04-19 21:36:29,893]  - method[com.appsmith.server.migrations.db.ce.Migration012RemoveStructureFromWithinDatasource] with arguments: [org.springframework.data.mongodb.core.MongoOperations, org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,893]  - method[executeMigration] with arguments: []
+[2024-04-19 21:36:29,906]  - APPLIED - {"id"="remove-structure-from-within-datasource-modified", "type"="execution", "author"="default_author", "class"="Migration012RemoveStructureFromWithinDatasource", "method"="executeMigration"}
+[2024-04-19 21:36:29,908]  - method[com.appsmith.server.migrations.db.ce.Migration013AddEmailBodyTypeToSMTPPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,908]  - method[addSmtpEmailBodyType] with arguments: []
+[2024-04-19 21:36:29,916]  - APPLIED - {"id"="add-smtp-email-body-type", "type"="execution", "author"="default_author", "class"="Migration013AddEmailBodyTypeToSMTPPlugin", "method"="addSmtpEmailBodyType"}
+[2024-04-19 21:36:29,918]  - method[com.appsmith.server.migrations.db.ce.Migration014AddIndexToDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,918]  - method[addingIndexToDatasourceStorage] with arguments: []
+[2024-04-19 21:36:29,925]  - APPLIED - {"id"="index-for-datasource-storage", "type"="execution", "author"="default_author", "class"="Migration014AddIndexToDatasourceStorage", "method"="addingIndexToDatasourceStorage"}
+[2024-04-19 21:36:29,927]  - method[com.appsmith.server.migrations.db.ce.Migration015AddPluginTypeIndexToNewActionCollection] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,927]  - method[addingIndexToNewAction] with arguments: []
+[2024-04-19 21:36:29,931]  - APPLIED - {"id"="app-id-plugin-type-index-for-new-action", "type"="execution", "author"="default_author", "class"="Migration015AddPluginTypeIndexToNewActionCollection", "method"="addingIndexToNewAction"}
+[2024-04-19 21:36:29,932]  - method[com.appsmith.server.migrations.db.ce.Migration016RenameIndexesWithLongNames] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:29,932]  - method[executeMigration] with arguments: []
+[2024-04-19 21:36:30,054]  - APPLIED - {"id"="rename-indexes-with-long-names", "type"="execution", "author"="default_author", "class"="Migration016RenameIndexesWithLongNames", "method"="executeMigration"}
+[2024-04-19 21:36:30,055]  - method[com.appsmith.server.migrations.db.ce.Migration017UnsetEncryptionVersion2Fields] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,055]  - method[executeMigration] with arguments: [org.springframework.data.mongodb.core.MongoOperations]
+[2024-04-19 21:36:30,059]  - APPLIED - {"id"="unset-not-encrypted-encryption-version-2-fields", "type"="execution", "author"="default_author", "class"="Migration017UnsetEncryptionVersion2Fields", "method"="executeMigration"}
+[2024-04-19 21:36:30,060]  - method[com.appsmith.server.migrations.db.ce.Migration018UpdateOraclePluginDocumentationLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,060]  - method[updateOracleDocumentationLink] with arguments: []
+[2024-04-19 21:36:30,063]  - APPLIED - {"id"="update-oracle-doc-link", "type"="execution", "author"="default_author", "class"="Migration018UpdateOraclePluginDocumentationLink", "method"="updateOracleDocumentationLink"}
+[2024-04-19 21:36:30,064]  - method[com.appsmith.server.migrations.db.ce.Migration019RemoveNullEnvIdDatasourceStructureDocuments] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,064]  - method[executeMigration] with arguments: []
+[2024-04-19 21:36:30,069]  - APPLIED - {"id"="delete-null-envId-key-document", "type"="execution", "author"="default_author", "class"="Migration019RemoveNullEnvIdDatasourceStructureDocuments", "method"="executeMigration"}
+[2024-04-19 21:36:30,071]  - method[com.appsmith.server.migrations.db.ce.Migration021MoveGoogleMapsKeyToTenantConfiguration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.configurations.CommonConfig]
+[2024-04-19 21:36:30,071]  - method[executeMigration] with arguments: []
+[2024-04-19 21:36:30,071]  - APPLIED - {"id"="move-google-maps-key-to-tenant-configuration", "type"="execution", "author"="default_author", "class"="Migration021MoveGoogleMapsKeyToTenantConfiguration", "method"="executeMigration"}
+[2024-04-19 21:36:30,072]  - method[com.appsmith.server.migrations.db.ce.Migration022AddConnectionMethodDefaultValueToAllMySQLDatasources] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,072]  - method[updateConnectionMethodDefaultValueForMySQL] with arguments: []
+[2024-04-19 21:36:30,074]  - APPLIED - {"id"="add-connection-method-default-value-for-mysql", "type"="execution", "author"="default_author", "class"="Migration022AddConnectionMethodDefaultValueToAllMySQLDatasources", "method"="updateConnectionMethodDefaultValueForMySQL"}
+[2024-04-19 21:36:30,075]  - method[com.appsmith.server.migrations.db.ce.Migration023UpdateJSPluginIcon] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,075]  - method[executeMigration] with arguments: []
+[2024-04-19 21:36:30,078]  - APPLIED - {"id"="update-js-plugin-icon", "type"="execution", "author"="default_author", "class"="Migration023UpdateJSPluginIcon", "method"="executeMigration"}
+[2024-04-19 21:36:30,079]  - method[com.appsmith.server.migrations.db.ce.Migration024EnableGenerateCRUDPageToggleForMssqlPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,079]  - method[enableGenerateCRUDPageToggle] with arguments: []
+[2024-04-19 21:36:30,081]  - APPLIED - {"id"="enable-generate-crud-page-for-mssql", "type"="execution", "author"="default_author", "class"="Migration024EnableGenerateCRUDPageToggleForMssqlPlugin", "method"="enableGenerateCRUDPageToggle"}
+[2024-04-19 21:36:30,082]  - method[com.appsmith.server.migrations.db.ce.Migration025AddIndexDeletedInApplication] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,082]  - method[createIndexInApplicationCollection] with arguments: []
+[2024-04-19 21:36:30,087]  - APPLIED - {"id"="add-index-application-deleted", "type"="execution", "author"="default_author", "class"="Migration025AddIndexDeletedInApplication", "method"="createIndexInApplicationCollection"}
+[2024-04-19 21:36:30,088]  - method[com.appsmith.server.migrations.db.ce.Migration025RemoveUnassignPermissionFromUnnecessaryRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,088]  - method[executeMigration] with arguments: []
+[2024-04-19 21:36:30,088]  - Check if performant query can be used.
+[2024-04-19 21:36:30,090]  - Using performant query.
+[2024-04-19 21:36:30,091]  - APPLIED - {"id"="remove-unassign-permission-from-workspace-dev-viewer-roles", "type"="execution", "author"="default_author", "class"="Migration025RemoveUnassignPermissionFromUnnecessaryRoles", "method"="executeMigration"}
+[2024-04-19 21:36:30,092]  - method[com.appsmith.server.migrations.db.ce.Migration026AddIndexTenantAndDeletedInWorkspace] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,092]  - method[addIndexInWorkspaceCollection] with arguments: []
+[2024-04-19 21:36:30,097]  - APPLIED - {"id"="add-index-workspace-tenant-deleted", "type"="execution", "author"="default_author", "class"="Migration026AddIndexTenantAndDeletedInWorkspace", "method"="addIndexInWorkspaceCollection"}
+[2024-04-19 21:36:30,098]  - method[com.appsmith.server.migrations.db.ce.Migration027AddIndexDatasourceIdAndDeletedInAction] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,098]  - method[addIndexInNewActionCollection] with arguments: []
+[2024-04-19 21:36:30,106]  - APPLIED - {"id"="new-action-compound-index-datasource-id", "type"="execution", "author"="default_author", "class"="Migration027AddIndexDatasourceIdAndDeletedInAction", "method"="addIndexInNewActionCollection"}
+[2024-04-19 21:36:30,107]  - method[com.appsmith.server.migrations.db.ce.Migration028TagUserManagementRolesWithoutDefaultDomainTypeAndId] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,107]  - method[tagUserManagementRolesWithoutDefaultDomainTypeAndId] with arguments: []
+[2024-04-19 21:36:30,111]  - APPLIED - {"id"="tag-user-management-roles-without-default-domain-type-and-id", "type"="execution", "author"="default_author", "class"="Migration028TagUserManagementRolesWithoutDefaultDomainTypeAndId", "method"="tagUserManagementRolesWithoutDefaultDomainTypeAndId"}
+[2024-04-19 21:36:30,112]  - method[com.appsmith.server.migrations.db.ce.Migration029PopulateDefaultDomainIdInUserManagementRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,112]  - method[populateDefaultDomainIdInUserManagementRoles] with arguments: []
+[2024-04-19 21:36:30,119]  - APPLIED - {"id"="populate-default-domain-id-in-user-management-roles", "type"="execution", "author"="default_author", "class"="Migration029PopulateDefaultDomainIdInUserManagementRoles", "method"="populateDefaultDomainIdInUserManagementRoles"}
+[2024-04-19 21:36:30,120]  - method[com.appsmith.server.migrations.db.ce.Migration030TagUsersWithNoUserManagementRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,120]  - method[tagUsersWithNoUserManagementRoles] with arguments: []
+[2024-04-19 21:36:30,123]  - APPLIED - {"id"="tag-users-with-no-user-management-roles", "type"="execution", "author"="default_author", "class"="Migration030TagUsersWithNoUserManagementRoles", "method"="tagUsersWithNoUserManagementRoles"}
+[2024-04-19 21:36:30,124]  - method[com.appsmith.server.migrations.db.ce.Migration031CreateUserManagementRolesForUsersTaggedIn030] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.solutions.PolicySolution]
+[2024-04-19 21:36:30,125]  - method[createUserManagementRolesForUsersTaggedInMigration030] with arguments: []
+[2024-04-19 21:36:30,125]  - Check if performant query can be used.
+[2024-04-19 21:36:30,125]  - Using performant query.
+[2024-04-19 21:36:30,126]  - APPLIED - {"id"="create-user-management-roles-for-users-tagged-in-migration-030", "type"="execution", "author"="default_author", "class"="Migration031CreateUserManagementRolesForUsersTaggedIn030", "method"="createUserManagementRolesForUsersTaggedInMigration030"}
+[2024-04-19 21:36:30,127]  - method[com.appsmith.server.migrations.db.ce.Migration032AddingXmlParserToApplicationLibraries] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,127]  - method[addXmlParserEntryToEachApplication] with arguments: []
+[2024-04-19 21:36:30,134]  - Going to add Xml Parser uid in all application DTOs
+[2024-04-19 21:36:30,137]  - APPLIED - {"id"="add-xml-parser-to-application-jslibs", "type"="execution", "author"="default_author", "class"="Migration032AddingXmlParserToApplicationLibraries", "method"="addXmlParserEntryToEachApplication"}
+[2024-04-19 21:36:30,139]  - method[com.appsmith.server.migrations.db.ce.Migration033AddOpenAIPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,139]  - method[addPluginToDbAndWorkspace] with arguments: []
+[2024-04-19 21:36:30,142]  - APPLIED - {"id"="add-open-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration033AddOpenAIPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:36:30,143]  - method[com.appsmith.server.migrations.db.ce.Migration034ChangeOpenAIIntegrationDocumentationLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,143]  - method[changeDocumentationLink] with arguments: []
+[2024-04-19 21:36:30,146]  - APPLIED - {"id"="change-open-ai-integration-documentation-link", "type"="execution", "author"="default_author", "class"="Migration034ChangeOpenAIIntegrationDocumentationLink", "method"="changeDocumentationLink"}
+[2024-04-19 21:36:30,147]  - method[com.appsmith.server.migrations.db.ce.Migration035AddAnthropicPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,147]  - method[addPluginToDbAndWorkspace] with arguments: []
+[2024-04-19 21:36:30,150]  - APPLIED - {"id"="add-anthropic-plugin", "type"="execution", "author"="default_author", "class"="Migration035AddAnthropicPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:36:30,152]  - method[com.appsmith.server.migrations.db.ce.Migration035RemoveMockDbEndPointInDatasourceInSelfHostedInstance] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.configurations.CommonConfig, com.appsmith.server.solutions.EnvManager]
+[2024-04-19 21:36:30,152]  - method[removeMockDbEndpointInDatasource] with arguments: []
+[2024-04-19 21:36:30,154]  - APPLIED - {"id"="remove-mockdb-endpoint-in-datasource-self-hosted-instance", "type"="execution", "author"="default_author", "class"="Migration035RemoveMockDbEndPointInDatasourceInSelfHostedInstance", "method"="removeMockDbEndpointInDatasource"}
+[2024-04-19 21:36:30,155]  - method[com.appsmith.server.migrations.db.ce.Migration036AddRecentlyUsedEntitiesForUserData] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,155]  - method[addRecentlyUsedEntitiesForUserData] with arguments: []
+[2024-04-19 21:36:30,156]  - APPLIED - {"id"="add-recently-used-entities-for-user", "type"="execution", "author"="default_author", "class"="Migration036AddRecentlyUsedEntitiesForUserData", "method"="addRecentlyUsedEntitiesForUserData"}
+[2024-04-19 21:36:30,157]  - method[com.appsmith.server.migrations.db.ce.Migration037AddCompoundIndexForNameAndDeletedAt] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,158]  - method[addIndexInWorkspaceAndApplicationsCollection] with arguments: []
+[2024-04-19 21:36:30,169]  - APPLIED - {"id"="add-compound-index-name-deleted", "type"="execution", "author"="default_author", "class"="Migration037AddCompoundIndexForNameAndDeletedAt", "method"="addIndexInWorkspaceAndApplicationsCollection"}
+[2024-04-19 21:36:30,171]  - method[com.appsmith.server.migrations.db.ce.Migration037MarkAnonymousUserAsSystemGenerated] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,171]  - method[executeMigration] with arguments: []
+[2024-04-19 21:36:30,173]  - Marked 1 anonymous users as system generated
+[2024-04-19 21:36:30,173]  - APPLIED - {"id"="mark-anonymous-user-as-system-generated", "type"="execution", "author"="default_author", "class"="Migration037MarkAnonymousUserAsSystemGenerated", "method"="executeMigration"}
+[2024-04-19 21:36:30,175]  - method[com.appsmith.server.migrations.db.ce.Migration038AddCompoundIndexForActionCollection] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,175]  - method[addIndexInActionCollection] with arguments: []
+[2024-04-19 21:36:30,182]  - APPLIED - {"id"="add-compound-index-action-collection", "type"="execution", "author"="default_author", "class"="Migration038AddCompoundIndexForActionCollection", "method"="addIndexInActionCollection"}
+[2024-04-19 21:36:30,183]  - method[com.appsmith.server.migrations.db.ce.Migration038AddGoogleAIPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,183]  - method[addPluginToDbAndWorkspace] with arguments: []
+[2024-04-19 21:36:30,186]  - APPLIED - {"id"="add-google-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration038AddGoogleAIPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:36:30,187]  - method[com.appsmith.server.migrations.db.ce.Migration039AddCompoundIndexForDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,187]  - method[addIndexInDatasourceStorageCollection] with arguments: []
+[2024-04-19 21:36:30,194]  - APPLIED - {"id"="add-compound-index-datasource-storage", "type"="execution", "author"="default_author", "class"="Migration039AddCompoundIndexForDatasourceStorage", "method"="addIndexInDatasourceStorageCollection"}
+[2024-04-19 21:36:30,195]  - method[com.appsmith.server.migrations.db.ce.Migration039AddDatabricksPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,195]  - method[addPluginToDbAndWorkspace] with arguments: []
+[2024-04-19 21:36:30,198]  - APPLIED - {"id"="add-databricks-plugin", "type"="execution", "author"="default_author", "class"="Migration039AddDatabricksPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:36:30,199]  - method[com.appsmith.server.migrations.db.ce.Migration039OpenAIMessagesJsToggle] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,199]  - method[moveMessagesToDataKeyForSupportingJsToggle] with arguments: []
+[2024-04-19 21:36:30,201]  - APPLIED - {"id"="move-messages-to-data-key-in-openai", "type"="execution", "author"="default_author", "class"="Migration039OpenAIMessagesJsToggle", "method"="moveMessagesToDataKeyForSupportingJsToggle"}
+[2024-04-19 21:36:30,202]  - method[com.appsmith.server.migrations.db.ce.Migration040AddAWSLambdaPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,203]  - method[addPluginToDbAndWorkspace] with arguments: []
+[2024-04-19 21:36:30,207]  - APPLIED - {"id"="add-aws-lambda-plugin", "type"="execution", "author"="default_author", "class"="Migration040AddAWSLambdaPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:36:30,208]  - method[com.appsmith.server.migrations.db.ce.Migration040AddAppsmithAiPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,208]  - method[addPluginToDbAndWorkspace] with arguments: []
+[2024-04-19 21:36:30,212]  - APPLIED - {"id"="add-appsmith-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration040AddAppsmithAiPlugin", "method"="addPluginToDbAndWorkspace"}
+[2024-04-19 21:36:30,214]  - method[com.appsmith.server.migrations.db.ce.Migration041TagWorkspacesForGitOperationsPermissionMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,214]  - method[addPermissionForGitOperationsToExistingWorkspaces] with arguments: []
+[2024-04-19 21:36:30,217]  - APPLIED - {"id"="tag-workspaces-to-migrate-adding-git-permissions", "type"="execution", "author"="default_author", "class"="Migration041TagWorkspacesForGitOperationsPermissionMigration", "method"="addPermissionForGitOperationsToExistingWorkspaces"}
+[2024-04-19 21:36:30,218]  - method[com.appsmith.server.migrations.db.ce.Migration042AddPermissionsForGitOperations] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,219]  - method[addPermissionForGitOperationsToExistingApplications] with arguments: []
+[2024-04-19 21:36:30,220]  - APPLIED - {"id"="add-permissions-for-git-operations", "type"="execution", "author"="default_author", "class"="Migration042AddPermissionsForGitOperations", "method"="addPermissionForGitOperationsToExistingApplications"}
+[2024-04-19 21:36:30,222]  - method[com.appsmith.server.migrations.db.ce.Migration043AddIndexActionCollectionPageID] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,222]  - method[addIndexToActionCollectionCollection] with arguments: []
+[2024-04-19 21:36:30,229]  - APPLIED - {"id"="add-index-to-action-collection-default-resources-pageid", "type"="execution", "author"="default_author", "class"="Migration043AddIndexActionCollectionPageID", "method"="addIndexToActionCollectionCollection"}
+[2024-04-19 21:36:30,230]  - method[com.appsmith.server.migrations.db.ce.Migration044AddIndexesToDomainObjects] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,230]  - method[addIndexToDomainObjects] with arguments: []
+[2024-04-19 21:36:30,245]  - APPLIED - {"id"="add-index-to-domain-objects", "type"="execution", "author"="default_author", "class"="Migration044AddIndexesToDomainObjects", "method"="addIndexToDomainObjects"}
+[2024-04-19 21:36:30,246]  - method[com.appsmith.server.migrations.db.ce.Migration045AddDefaultAppsmithAiDatasourceForOrphanActions] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,246]  - method[addDefaultAppsmithAiDatasourceForOrphanActions] with arguments: []
+[2024-04-19 21:36:30,248]  - APPLIED - {"id"="add-default-appsmith-datasource", "type"="execution", "author"="default_author", "class"="Migration045AddDefaultAppsmithAiDatasourceForOrphanActions", "method"="addDefaultAppsmithAiDatasourceForOrphanActions"}
+[2024-04-19 21:36:30,249]  - method[com.appsmith.server.migrations.db.ce.Migration046DeleteArchivedPlugins] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,249]  - method[deleteArchivedPlugins] with arguments: []
+[2024-04-19 21:36:30,254]  - APPLIED - {"id"="delete-archived-pluginsd", "type"="execution", "author"="default_author", "class"="Migration046DeleteArchivedPlugins", "method"="deleteArchivedPlugins"}
+[2024-04-19 21:36:30,255]  - method[com.appsmith.server.migrations.db.ce.Migration047AddMissingFieldsInDefaultAppsmithAiDatasource] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,255]  - method[addMissingFieldsInDefaultAppsmithAiDatasource] with arguments: []
+[2024-04-19 21:36:30,258]  - APPLIED - {"id"="add-missing-fields-in-default-appsmith-datasource", "type"="execution", "author"="default_author", "class"="Migration047AddMissingFieldsInDefaultAppsmithAiDatasource", "method"="addMissingFieldsInDefaultAppsmithAiDatasource"}
+[2024-04-19 21:36:30,259]  - method[com.appsmith.server.migrations.db.ce.Migration048AddCompoundIndexToUserEntity] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,259]  - method[addMissingIndexInUserCollection] with arguments: []
+[2024-04-19 21:36:30,373]  - APPLIED - {"id"="add-compound-index-in-user-collection", "type"="execution", "author"="default_author", "class"="Migration048AddCompoundIndexToUserEntity", "method"="addMissingIndexInUserCollection"}
+[2024-04-19 21:36:30,374]  - method[com.appsmith.server.migrations.db.ce.Migration049RemoveLayoutBaseFields] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,375]  - method[execute] with arguments: []
+[2024-04-19 21:36:30,383]  - APPLIED - {"id"="remove-layout-base-fields", "type"="execution", "author"="default_author", "class"="Migration049RemoveLayoutBaseFields", "method"="execute"}
+[2024-04-19 21:36:30,384]  - method[com.appsmith.server.migrations.db.ce.Migration020TransferToDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2024-04-19 21:36:30,384]  - method[executeMigration] with arguments: []
+[2024-04-19 21:36:30,385]  - Check if performant query can be used.
+[2024-04-19 21:36:30,386]  - Using performant query.
+[2024-04-19 21:36:30,387]  - APPLIED - {"id"="migrate-configurations-to-data-storage-v2", "type"="execution", "author"="default_author", "class"="Migration020TransferToDatasourceStorage", "method"="executeMigration"}
+[2024-04-19 21:36:30,388]  - Mongock releasing the lock
+[2024-04-19 21:36:30,388]  - Mongock releasing the lock
+[2024-04-19 21:36:30,389]  - Mongock released the lock
+[2024-04-19 21:36:30,389]  - Mongock has finished
+[2024-04-19 21:36:30,817]  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2024-04-19 21:36:30,983]  - Netty started on port 8080
+[2024-04-19 21:36:30,994]  - Started ServerApplication in 9.234 seconds (process running for 9.719)
+[2024-04-19 21:36:31,000]  - Performing RTS health check of this instance...
+[2024-04-19 21:36:31,009]  - In memory cache miss for anonymous user permission groups. Fetching from DB and adding it to in memory storage.
+[2024-04-19 21:36:31,031]  - Fetched and set conenncted mongo db version as: 5.0.26
+[2024-04-19 21:36:31,054]  - Triggering registration of this instance...
+[2024-04-19 21:36:31,718]  - Registration successful, updating state ...
+[2024-04-19 21:36:31,749]  - RTS health check succeeded
+[2024-04-19 21:36:31,752]  - License verification completed with status: valid
+[2024-04-19 21:36:31,765]  - Cache miss for key tenantNewFeatures:6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:36:31,877]  - Cache entry added for key tenantNewFeatures:6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:36:40,996]  - Fetching features for default tenant
+[2024-04-19 21:36:43,973] userEmail=anonymousUser, sessionId=, thread=reactor-http-nio-7, requestId=8cde2892-c2da-494d-9f42-3b74d5cc7bad - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: null, branchName: null, mode: PUBLISHED
+[2024-04-19 21:36:44,039] userEmail=anonymousUser, sessionId=, thread=lettuce-nioEventLoop-10-1, requestId=8cde2892-c2da-494d-9f42-3b74d5cc7bad - Cache miss for key featureFlag:68385f9726ad05c8e551a8d5be5cd8213f1e733346a9eb00e86f83df94639555
+[2024-04-19 21:36:44,116] userEmail=anonymousUser, sessionId=, thread=lettuce-nioEventLoop-10-1, requestId=8cde2892-c2da-494d-9f42-3b74d5cc7bad - Cache miss for key permissionGroupsForUser:anonymousUser6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:36:44,116] userEmail=anonymousUser, sessionId=, thread=lettuce-nioEventLoop-10-1, requestId=8cde2892-c2da-494d-9f42-3b74d5cc7bad - Cache entry added for key permissionGroupsForUser:anonymousUser6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:36:44,207] userEmail=anonymousUser, sessionId=, thread=reactor-http-nio-3, requestId=8cde2892-c2da-494d-9f42-3b74d5cc7bad - Cache entry added for key featureFlag:68385f9726ad05c8e551a8d5be5cd8213f1e733346a9eb00e86f83df94639555
+[2024-04-19 21:36:47,849]  - Cancelled mongock lock daemon
+[2024-04-19 21:36:58,830] userEmail=anonymousUser, sessionId=, thread=reactor-http-nio-7, requestId=cb60ca22-7f72-4668-ba72-d0799174c546 - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: null, branchName: null, mode: PUBLISHED
+[2024-04-19 21:37:38,063] userEmail=anonymousUser, sessionId=, thread=lettuce-nioEventLoop-10-1, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Cache miss for key permissionGroupsForUser:asdjfhb@sdfhjg.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:37:38,071] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-4, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Cache entry added for key permissionGroupsForUser:asdjfhb@sdfhjg.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:37:38,080] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-4, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserServiceCEImpl::Time taken for create user: 61 ms
+[2024-04-19 21:37:38,179] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-3, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Cache entry evicted for key permissionGroupsForUser:asdjfhb@sdfhjg.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:37:38,192] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-3, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserServiceCEImpl::Time taken to create default workspace: 107 ms
+[2024-04-19 21:37:38,192] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-3, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Created blank default workspace for user 'asdjfhb@sdfhjg.com'.
+[2024-04-19 21:37:38,195] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-3, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserServiceCEImpl::Time taken to find created user: 176 ms
+[2024-04-19 21:37:38,195] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-3, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserSignupCEImpl::Time taken for create user and send email: 184 ms
+[2024-04-19 21:37:38,196] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-3, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Login succeeded for user: User(name=asdf asdf, email=asdjfhb@sdfhjg.com, hashedEmail=null, passwordResetInitiated=false, source=FORM, state=ACTIVATED, isEnabled=true, emailVerificationRequired=null, emailVerified=null, currentWorkspaceId=null, workspaceIds=null, examplesWorkspaceId=null, groupIds=[], permissions=[], inviteToken=null, isAnonymous=false, tenantId=6622e3ddcdbbd6277a5ce41d, isSystemGenerated=null)
+[2024-04-19 21:37:38,226] userEmail=anonymousUser, sessionId=, thread=lettuce-nioEventLoop-10-1, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Cache miss for key permissionGroupsForUser:asdjfhb@sdfhjg.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:37:38,228] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-3, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Cache entry added for key permissionGroupsForUser:asdjfhb@sdfhjg.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:37:38,405] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-5, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Published application 6622e422cdbbd6277a5ce43f in 59 ms
+[2024-04-19 21:37:38,410] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-5, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserSignupCEImpl::Time taken for authentication success: 205 ms
+[2024-04-19 21:37:38,411] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-5, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserSignupCEImpl::Time taken to complete signupAndLogin: 485 ms
+[2024-04-19 21:37:38,417] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-5, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Cache entry evicted for key permissionGroupsForUser:asdjfhb@sdfhjg.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:37:38,418] userEmail=anonymousUser, sessionId=, thread=lettuce-nioEventLoop-10-1, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserSignupCEImpl::Time taken to complete makeSuperUser: 7 ms
+[2024-04-19 21:37:38,419]  - UserSignupCEImpl::Time taken to send create super user event: 0 ms
+[2024-04-19 21:37:38,419]  - UserSignupCEImpl::Time taken to get instance ID: 0 ms
+[2024-04-19 21:37:38,420]  - UserSignupCEImpl::Time taken to get external address: 1 ms
+[2024-04-19 21:37:38,420]  - Installation setup complete.
+[2024-04-19 21:37:38,421]  - UserSignupCEImpl::Time taken to send installation setup complete analytics event: 1 ms
+[2024-04-19 21:37:38,421]  - UserSignupCEImpl::Time taken to send installation setup analytics event: 2 ms
+[2024-04-19 21:37:38,421] userEmail=anonymousUser, sessionId=, thread=lettuce-nioEventLoop-10-1, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Cache miss for key permissionGroupsForUser:asdjfhb@sdfhjg.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:37:38,425] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-5, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - Cache entry added for key permissionGroupsForUser:asdjfhb@sdfhjg.com6622e3ddcdbbd6277a5ce41d
+[2024-04-19 21:37:38,428] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-3, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserSignupCEImpl::Time taken to update user data for user: 9 ms
+[2024-04-19 21:37:38,458] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-5, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserSignupCEImpl::Time taken to apply env changes: 38 ms
+[2024-04-19 21:37:38,458] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-5, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserSignupCEImpl::Time taken to complete all secondary functions: 39 ms
+[2024-04-19 21:37:38,459] userEmail=anonymousUser, sessionId=, thread=nioEventLoopGroup-3-5, requestId=fb7d7c69-daf2-497d-a988-fbbba9530e65 - UserSignupCEImpl::Time taken for the user mono to complete: 551 ms
+[2024-04-19 21:37:38,636] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=1e5eb747-4caa-4a2c-8ce2-1c686765e729 - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: null, branchName: null, mode: PUBLISHED
+[2024-04-19 21:37:38,643] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=1e5eb747-4caa-4a2c-8ce2-1c686765e729 - Cache miss for key featureFlag:57f39a2b6bb89e92301d3d7857577f1ca5fc02e7c5a0eb7fc6e070b818459418
+[2024-04-19 21:37:38,731] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=reactor-http-nio-3, requestId=1e5eb747-4caa-4a2c-8ce2-1c686765e729 - Cache entry added for key featureFlag:57f39a2b6bb89e92301d3d7857577f1ca5fc02e7c5a0eb7fc6e070b818459418
+[2024-04-19 21:37:38,877] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=1604b2f0-2abc-4de7-b222-e1e7f213541e - Going to get all applications by workspace id 6622e422cdbbd6277a5ce43a
+[2024-04-19 21:37:38,928] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Going to get all resources from base controller {workspaceId=[6622e422cdbbd6277a5ce43a]}
+[2024-04-19 21:37:38,935] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Fetching plugins by params: {workspaceId=[6622e422cdbbd6277a5ce43a]} for org: asdf's apps
+[2024-04-19 21:37:38,943] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin restapi-plugin
+[2024-04-19 21:37:38,945] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin elasticsearch-plugin
+[2024-04-19 21:37:38,945] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin dynamo-plugin
+[2024-04-19 21:37:38,945] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin redis-plugin
+[2024-04-19 21:37:38,946] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin firestore-plugin
+[2024-04-19 21:37:38,947] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin redshift-plugin
+[2024-04-19 21:37:38,947] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin amazons3-plugin
+[2024-04-19 21:37:38,947] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin google-sheets-plugin
+[2024-04-19 21:37:38,949] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin js-plugin
+[2024-04-19 21:37:38,949] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin smtp-plugin
+[2024-04-19 21:37:38,949] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin graphql-plugin
+[2024-04-19 21:37:38,951] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin openai-plugin
+[2024-04-19 21:37:38,951] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin anthropic-plugin
+[2024-04-19 21:37:38,951] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin googleai-plugin
+[2024-04-19 21:37:38,952] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin databricks-plugin
+[2024-04-19 21:37:38,952] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin aws-lambda-plugin
+[2024-04-19 21:37:38,952] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin appsmithai-plugin
+[2024-04-19 21:37:38,953] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin saas-plugin
+[2024-04-19 21:37:38,954] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin saas-plugin
+[2024-04-19 21:37:38,955] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=7e32390d-952f-47a6-8082-5d7c46c33289 - Error loading templates metadata in plugin saas-plugin
+[2024-04-19 21:39:54,874] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=a6f4d6d3-ffd1-4f46-8e4d-6d67ca0e50e8 - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: 6622e422cdbbd6277a5ce442, branchName: null, mode: EDIT
+[2024-04-19 21:39:54,900] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-6, requestId=a6f4d6d3-ffd1-4f46-8e4d-6d67ca0e50e8 - Retrieved possible application ids for page, picking the appropriate one now
+[2024-04-19 21:39:54,907] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-5, requestId=a6f4d6d3-ffd1-4f46-8e4d-6d67ca0e50e8 - Fetched application data for id: 6622e422cdbbd6277a5ce43f
+[2024-04-19 21:39:54,934] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-6, requestId=a6f4d6d3-ffd1-4f46-8e4d-6d67ca0e50e8 - Retrieved Page DTOs from DB ...
+[2024-04-19 21:39:54,935] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-6, requestId=a6f4d6d3-ffd1-4f46-8e4d-6d67ca0e50e8 - Populating applicationPagesDTO ...
+[2024-04-19 21:39:54,939] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-7, requestId=a6f4d6d3-ffd1-4f46-8e4d-6d67ca0e50e8 - Fetching plugins by params: {workspaceId=[6622e422cdbbd6277a5ce43a]} for org: asdf's apps
+[2024-04-19 21:39:55,031] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=7bbea013-d6d5-47cc-9a64-2a41d9b4b723 - Going to get snapshot with application id: 6622e422cdbbd6277a5ce43f, branch: null
+[2024-04-19 21:39:55,164] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=82f80dc2-6a2d-49aa-aa46-8aa3da93d1b4 - Going to get resource from base controller for id: 6622e422cdbbd6277a5ce43a
+[2024-04-19 21:42:49,302] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-3, requestId=f5396934-d6c9-4663-bf48-f12f81e73320 - 
+com.appsmith.server.exceptions.AppsmithException: Git configuration is invalid. Details: Can't find valid SSH key. Please configure the application with git
+	at com.appsmith.server.applications.base.ApplicationServiceCEImpl.lambda$getSshKey$31(ApplicationServiceCEImpl.java:815)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Handler com.appsmith.server.controllers.ApplicationController#getSSHKey(String) [DispatcherHandler]
+Original Stack Trace:
+		at com.appsmith.server.applications.base.ApplicationServiceCEImpl.lambda$getSshKey$31(ApplicationServiceCEImpl.java:815)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:132)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoUsingWhen$MonoUsingWhenSubscriber.deferredComplete(MonoUsingWhen.java:268)
+		at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:527)
+		at reactor.core.publisher.Operators.complete(Operators.java:137)
+		at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:384)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:293)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:187)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2545)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:291)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onSubscribe(MDCConfig.java:54)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2545)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onSubscribe(MonoFlatMap.java:291)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onSubscribe(MDCConfig.java:54)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2071)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2205)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:260)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:240)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+		at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:460)
+		at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:805)
+		at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:753)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:247)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:213)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:204)
+		at com.mongodb.reactivestreams.client.internal.BatchCursorFlux.lambda$recurseCursor$4(BatchCursorFlux.java:102)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:171)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:172)
+		at com.mongodb.reactivestreams.client.internal.MongoOperationPublisher.lambda$sinkToCallback$31(MongoOperationPublisher.java:577)
+		at com.mongodb.internal.operation.AsyncQueryBatchCursor.next(AsyncQueryBatchCursor.java:173)
+		at com.mongodb.reactivestreams.client.internal.BatchCursor.lambda$next$0(BatchCursor.java:38)
+		at reactor.core.publisher.MonoCreate.subscribe(MonoCreate.java:58)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.Mono.subscribeWith(Mono.java:4561)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4323)
+		at com.mongodb.reactivestreams.client.internal.BatchCursorFlux.recurseCursor(BatchCursorFlux.java:108)
+		at com.mongodb.reactivestreams.client.internal.BatchCursorFlux.lambda$subscribe$0(BatchCursorFlux.java:60)
+		at reactor.core.publisher.LambdaMonoSubscriber.onNext(LambdaMonoSubscriber.java:171)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:60)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:172)
+		at com.mongodb.reactivestreams.client.internal.MongoOperationPublisher.lambda$sinkToCallback$31(MongoOperationPublisher.java:577)
+		at com.mongodb.reactivestreams.client.internal.OperationExecutorImpl.lambda$execute$2(OperationExecutorImpl.java:94)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.async.function.RetryingAsyncCallbackSupplier$RetryingCallback.onResult(RetryingAsyncCallbackSupplier.java:116)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.operation.FindOperation$1.onResult(FindOperation.java:379)
+		at com.mongodb.internal.operation.CommandOperationHelper.lambda$transformingReadCallback$10(CommandOperationHelper.java:332)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor$1.onResult(DefaultServer.java:242)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.connection.CommandProtocolImpl$1.onResult(CommandProtocolImpl.java:84)
+		at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection$1.onResult(DefaultConnectionPool.java:683)
+		at com.mongodb.internal.connection.UsageTrackingInternalConnection$2.onResult(UsageTrackingInternalConnection.java:159)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:46)
+		at com.mongodb.internal.connection.InternalStreamConnection$2$1.onResult(InternalStreamConnection.java:524)
+		at com.mongodb.internal.connection.InternalStreamConnection$2$1.onResult(InternalStreamConnection.java:501)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:824)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:788)
+		at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:648)
+		at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:645)
+		at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:319)
+		at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:266)
+		at com.mongodb.internal.connection.InternalStreamConnection.readAsync(InternalStreamConnection.java:645)
+		at com.mongodb.internal.connection.InternalStreamConnection.access$600(InternalStreamConnection.java:89)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:778)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:763)
+		at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:648)
+		at com.mongodb.internal.connection.InternalStreamConnection$5.completed(InternalStreamConnection.java:645)
+		at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:319)
+		at com.mongodb.connection.netty.NettyStream.handleReadResponse(NettyStream.java:347)
+		at com.mongodb.connection.netty.NettyStream.access$1100(NettyStream.java:105)
+		at com.mongodb.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:421)
+		at com.mongodb.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:418)
+		at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-04-19 21:44:01,723] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - boundedElastic-4: Cloning the repo from the remote git@github.com:sunaqii/CS3200_final_UI.git
+[2024-04-19 21:44:01,887]  - Thread[JGit-FileStoreAttributeReader-1,10,main]: got smaller file timestamp on /appsmith-stacks (/host_mark/Users), /appsmith-stacks/git-storage/6622e422cdbbd6277a5ce43a/6622e422cdbbd6277a5ce43f/CS3200_final_UI/.git: 2024-04-19T21:44:01Z < 2024-04-19T21:44:01.876478125Z. Aborting measurement at resolution PT0.123521875S.
+[2024-04-19 21:44:03,201] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Execute time: JGIT git_clone, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 1481ms
+[2024-04-19 21:44:03,279] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-3, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - time to import custom jslibs: 0
+[2024-04-19 21:44:03,297] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-3, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - time to create or update application object: 15
+[2024-04-19 21:44:03,301] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-3, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - time to get plugin map: 3
+[2024-04-19 21:44:03,305] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Time taken to import datasources: 3 ms
+[2024-04-19 21:44:03,306]  - [b2d648ec-1, L:/172.18.0.3:45342 ! R:github.com/140.82.116.4:443] An exception has been observed post termination, use DEBUG level to see the full stack: reactor.netty.http.client.PrematureCloseException: Connection prematurely closed DURING response
+[2024-04-19 21:44:03,312] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-3, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Importing page: Page1
+[2024-04-19 21:44:03,317] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - time to import 2 pages: 10
+[2024-04-19 21:44:03,317] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - New pages imported for application: 6622e422cdbbd6277a5ce43f
+[2024-04-19 21:44:03,327] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Saving actions in bulk. New: 0, Updated: 0
+[2024-04-19 21:44:03,328] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - time to import 0 actions: 6 ms
+[2024-04-19 21:44:03,329] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Actions imported. result: existing actions: 0, imported actions: 0
+[2024-04-19 21:44:03,329] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Importing action collections
+[2024-04-19 21:44:03,333] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Saving action collections in bulk. New: 0, Updated: 0
+[2024-04-19 21:44:03,334] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Action collections imported. artifactId 6622e422cdbbd6277a5ce43f, result: existing action collections: 0, imported action collections: 0
+[2024-04-19 21:44:03,339] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-3, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Updated actions with imported collection ids. artifactId 6622e422cdbbd6277a5ce43f
+[2024-04-19 21:44:03,340] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-3, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Deleting 0 action collections which are no more used
+[2024-04-19 21:44:03,346] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-3, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Imported application with id 6622e422cdbbd6277a5ce43f
+[2024-04-19 21:44:03,400] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-3, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Execute time: import, Time elapsed: 142ms
+[2024-04-19 21:44:03,410] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-5, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Trying to commit to local repo path, /appsmith-stacks/git-storage/6622e422cdbbd6277a5ce43a/6622e422cdbbd6277a5ce43f/CS3200_final_UI
+[2024-04-19 21:44:03,479] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-5, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Execute time: JGIT git_commit, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 68ms
+[2024-04-19 21:44:03,658] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Execute time: JGIT git_reset, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 25ms
+[2024-04-19 21:44:03,660] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - boundedElastic-6: Switching to the branch master
+[2024-04-19 21:44:03,674] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Execute time: JGIT git_reset, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 11ms
+[2024-04-19 21:44:03,696] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Execute time: FS application save, Time elapsed: 67ms
+[2024-04-19 21:44:03,697] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Trying to commit to local repo path, /appsmith-stacks/git-storage/6622e422cdbbd6277a5ce43a/6622e422cdbbd6277a5ce43f/CS3200_final_UI
+[2024-04-19 21:44:03,733] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Execute time: JGIT git_commit, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 35ms
+[2024-04-19 21:44:03,739] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - boundedElastic-6: Switching to the branch master
+[2024-04-19 21:44:03,742] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - boundedElastic-4: pushing changes to remote git@github.com:sunaqii/CS3200_final_UI.git
+[2024-04-19 21:44:05,223] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Execute time: JGIT git_push, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 1480ms
+[2024-04-19 21:44:05,274] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-4, requestId=4af9babd-a7b7-4cd9-984d-91c6701bdffb - Published application 6622e422cdbbd6277a5ce43f in 44 ms
+[2024-04-19 21:44:05,407] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=7ed9556b-ecf8-4560-ac30-0a519c556169 - Going to get branch list for application 6622e422cdbbd6277a5ce43f
+[2024-04-19 21:44:05,419] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - Going to get status for default application 6622e422cdbbd6277a5ce43f, branch master
+[2024-04-19 21:44:05,448] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-4, requestId=7ed9556b-ecf8-4560-ac30-0a519c556169 - boundedElastic-4: Get branches for the application 6622e422cdbbd6277a5ce43a/6622e422cdbbd6277a5ce43f/CS3200_final_UI
+[2024-04-19 21:44:05,509] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - Execute time: JGIT git_reset, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 17ms
+[2024-04-19 21:44:05,510] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-7, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - boundedElastic-7: Switching to the branch master
+[2024-04-19 21:44:05,527] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - Execute time: JGIT git_reset, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 14ms
+[2024-04-19 21:44:05,530] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - Execute time: FS application save, Time elapsed: 40ms
+[2024-04-19 21:44:05,547] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=ae1e88c3-48c3-420c-b6d5-8323cc5129c2 - Going to get snapshot with application id: 6622e422cdbbd6277a5ce43f, branch: master
+[2024-04-19 21:44:05,602]  - [5a06b0cf-1, L:/172.18.0.3:45356 ! R:github.com/140.82.116.4:443] An exception has been observed post termination, use DEBUG level to see the full stack: reactor.netty.http.client.PrematureCloseException: Connection prematurely closed DURING response
+[2024-04-19 21:44:06,741] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-5, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - Execute time: JGIT git_fetch, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 1249ms
+[2024-04-19 21:44:06,746] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - boundedElastic-6: Get status for repo  /appsmith-stacks/git-storage/6622e422cdbbd6277a5ce43a/6622e422cdbbd6277a5ce43f/CS3200_final_UI, branch master
+[2024-04-19 21:44:06,759] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - Execute time: JGIT git_status, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 16ms
+[2024-04-19 21:44:06,774] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-5, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - Execute time: JGIT git_reset, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 12ms
+[2024-04-19 21:44:06,775] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-6, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - boundedElastic-6: Switching to the branch master
+[2024-04-19 21:44:06,784] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-5, requestId=abc922c8-e668-42e6-a377-63aced4d4d23 - Execute time: JGIT git_reset, appId 6622e422cdbbd6277a5ce43f, Time elapsed: 8ms
+[2024-04-19 21:45:57,147] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=6a0bcd42-ac2c-4dca-b948-1a28ae1c30bd - Going to remove the remoteUrl for application 6622e422cdbbd6277a5ce43f
+[2024-04-19 21:45:57,163] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=boundedElastic-8, requestId=6a0bcd42-ac2c-4dca-b948-1a28ae1c30bd - boundedElastic-8: Get branches for the application 6622e422cdbbd6277a5ce43a/6622e422cdbbd6277a5ce43f/CS3200_final_UI
+[2024-04-19 21:45:57,265] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=7810c364-1fe3-49da-b5eb-eea683fbdcb9 - Going to get all applications by workspace id 6622e422cdbbd6277a5ce43a
+[2024-04-19 21:45:57,271] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=ffb2998b-2faa-4c36-b9b8-4a67597dd765 - Going to fetch consolidatedAPI response for applicationId: null, defaultPageId: 6622e422cdbbd6277a5ce442, branchName: null, mode: EDIT
+[2024-04-19 21:45:57,284] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-5, requestId=ffb2998b-2faa-4c36-b9b8-4a67597dd765 - Retrieved possible application ids for page, picking the appropriate one now
+[2024-04-19 21:45:57,291] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-6, requestId=ffb2998b-2faa-4c36-b9b8-4a67597dd765 - Fetched application data for id: 6622e422cdbbd6277a5ce43f
+[2024-04-19 21:45:57,306] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-6, requestId=ffb2998b-2faa-4c36-b9b8-4a67597dd765 - Retrieved Page DTOs from DB ...
+[2024-04-19 21:45:57,306] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-6, requestId=ffb2998b-2faa-4c36-b9b8-4a67597dd765 - Populating applicationPagesDTO ...
+[2024-04-19 21:45:57,309] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=nioEventLoopGroup-3-6, requestId=ffb2998b-2faa-4c36-b9b8-4a67597dd765 - Fetching plugins by params: {workspaceId=[6622e422cdbbd6277a5ce43a]} for org: asdf's apps
+[2024-04-19 21:45:57,353] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=3a0a274d-7816-490b-b3f7-be5747bae76c - Going to get snapshot with application id: 6622e422cdbbd6277a5ce43f, branch: null
+[2024-04-19 21:45:57,429] userEmail=asdjfhb@sdfhjg.com, sessionId=55d29dc7-851a-432f-bc36-fb1dd76c536d, thread=lettuce-nioEventLoop-10-1, requestId=8c57ca76-7200-4801-a540-cfb7b31816ae - Going to get resource from base controller for id: 6622e422cdbbd6277a5ce43a
+[2024-04-19 21:46:19,148]  - Commencing graceful shutdown. Waiting for active requests to complete
+[2024-04-19 21:46:19,150]  - Graceful shutdown complete
+[2024-04-19 21:46:19,167]  - Operator called default onErrorDropped
+reactor.core.Exceptions$ErrorCallbackNotImplemented: java.util.concurrent.CancellationException: Disconnected
+Caused by: java.util.concurrent.CancellationException: Disconnected
+	at reactor.core.publisher.FluxPublish$PublishSubscriber.disconnectAction(FluxPublish.java:327)
+	at reactor.core.publisher.FluxPublish$PublishSubscriber.dispose(FluxPublish.java:318)
+	at org.springframework.data.redis.connection.lettuce.LettuceReactiveSubscription$State.terminate(LettuceReactiveSubscription.java:271)
+	at org.springframework.data.redis.connection.lettuce.LettuceReactiveSubscription.lambda$cancel$8(LettuceReactiveSubscription.java:149)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:240)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:203)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:209)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:238)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:203)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2205)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2205)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:250)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onComplete(MonoFlatMap.java:324)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:70)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:900)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:702)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:612)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:569)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:326)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:341)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:782)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:65)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:63)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:747)
+	at io.lettuce.core.pubsub.PubSubCommandHandler.complete(PubSubCommandHandler.java:167)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:682)
+	at io.lettuce.core.pubsub.PubSubCommandHandler.decode(PubSubCommandHandler.java:112)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:599)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
