@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask
 from database import mysql
 from read import read
 
@@ -12,10 +12,12 @@ mysql.init_app(app)
 
 app.register_blueprint(read)
 
+from CS3200_project.students.student_api import student_blueprint
+from CS3200_project.professors.professor_api import professor_blueprint
 
-@app.route('/')
-def default():
-    return 'Hello World!'
+app.register_blueprint(student_blueprint)
+app.register_blueprint(professor_blueprint)
+
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug = True, host = '0.0.0.0', port = 4000)
