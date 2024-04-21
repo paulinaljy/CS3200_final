@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from database import mysql
+from CS3200_project.database import mysql
 
 read = Blueprint('read', __name__)
 
