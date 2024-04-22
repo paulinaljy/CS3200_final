@@ -41,6 +41,8 @@ def post_form():
     last_name = request.form['last']
 
     conn = connect_to_database('student.db')
+    # with open('student.sql') as f:
+    # conn.executescript(f.read())
     students = read_student_data(conn, first_name, last_name)
 
     html_table = "<h2>Student Data</h2>"
@@ -95,78 +97,78 @@ def post_form():
 #
 
 
-@student_bp.route('/update_student_form')
-def update_student_form():
-    html_content = """
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Update Student Course</title>
-    </head>
-    <body>
-        <h2>Update Student Course</h2>
-        <form id="updateForm">
-            <label for="studentId">Student ID:</label><br>
-            <input type="text" id="studentId" name="studentId" required><br>
-            <label for="newCourseName">New Course Name:</label><br>
-            <input type="text" id="newCourseName" name="newCourseName" required><br><br>
-            <input type="submit" value="Update">
-        </form>
-
-        <script>
-            document.getElementById("updateForm").addEventListener("submit", function(event) {
-                event.preventDefault();
-
-                var studentId = document.getElementById("studentId").value;
-                var newCourseName = document.getElementById("newCourseName").value;
-
-                var url = "/update_student/" + studentId;
-                var data = { new_course_name: newCourseName };
-
-                fetch(url, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                })
-                .then(response => {
-                    if (response.ok) {
-                        alert("Student course updated successfully.");
-                    } else {
-                        alert("Failed to update student course.");
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert("Failed to update student course.");
-                });
-            });
-        </script>
-    </body>
-    </html>
-    """
-    return html_content
-
-@student_bp.route('/update_students/<int:student_id>', methods=['PUT'])
-def update_student(student_id):
-    data = request.json
-    new_course_name = data.get('new_course_name')
-
-    if not new_course_name:
-        return "New course name is missing", 400
-
-    conn = connect_to_database('student.db')
-    cursor = conn.cursor()
-
-    cursor.execute("UPDATE Student SET Course_Name=? WHERE Student_ID=?", (new_course_name, student_id))
-    conn.commit()
-
-    conn.close()
-
-    return "Student course name updated successfully."
+# @student_bp.route('/update_student_form')
+# def update_student_form():
+#     html_content = """
+#     <!DOCTYPE html>
+#     <html lang="en">
+#     <head>
+#         <meta charset="UTF-8">
+#         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#         <title>Update Student Course</title>
+#     </head>
+#     <body>
+#         <h2>Update Student Course</h2>
+#         <form id="updateForm">
+#             <label for="studentId">Student ID:</label><br>
+#             <input type="text" id="studentId" name="studentId" required><br>
+#             <label for="newCourseName">New Course Name:</label><br>
+#             <input type="text" id="newCourseName" name="newCourseName" required><br><br>
+#             <input type="submit" value="Update">
+#         </form>
+#
+#         <script>
+#             document.getElementById("updateForm").addEventListener("submit", function(event) {
+#                 event.preventDefault();
+#
+#                 var studentId = document.getElementById("studentId").value;
+#                 var newCourseName = document.getElementById("newCourseName").value;
+#
+#                 var url = "/update_student/" + studentId;
+#                 var data = { new_course_name: newCourseName };
+#
+#                 fetch(url, {
+#                     method: 'PUT',
+#                     headers: {
+#                         'Content-Type': 'application/json'
+#                     },
+#                     body: JSON.stringify(data)
+#                 })
+#                 .then(response => {
+#                     if (response.ok) {
+#                         alert("Student course updated successfully.");
+#                     } else {
+#                         alert("Failed to update student course.");
+#                     }
+#                 })
+#                 .catch(error => {
+#                     console.error('Error:', error);
+#                     alert("Failed to update student course.");
+#                 });
+#             });
+#         </script>
+#     </body>
+#     </html>
+#     """
+#     return html_content
+#
+# @student_bp.route('/update_students/<int:student_id>', methods=['PUT'])
+# def update_student(student_id):
+#     data = request.json
+#     new_course_name = data.get('new_course_name')
+#
+#     if not new_course_name:
+#         return "New course name is missing", 400
+#
+#     conn = connect_to_database('student.db')
+#     cursor = conn.cursor()
+#
+#     cursor.execute("UPDATE Student SET Course_Name=? WHERE Student_ID=?", (new_course_name, student_id))
+#     conn.commit()
+#
+#     conn.close()
+#
+#     return "Student course name updated successfully."
 
 @student_bp.route('/delete_student/<int:student_id>', methods=['DELETE'])
 def delete_student(student_id):

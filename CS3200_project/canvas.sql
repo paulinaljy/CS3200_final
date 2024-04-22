@@ -643,16 +643,6 @@ CREATE TABLE IF NOT EXISTS Progress(
 
 INSERT INTO Progress (Progress_Rate, Course_ID, Student_ID)
 VALUES
-CREATE TABLE IF NOT EXISTS Progress(
-                                       Progress_Rate INTEGER PRIMARY KEY,
-                                       Course_ID INT,
-                                       Student_ID INT,
-                                       FOREIGN KEY (Course_ID) REFERENCES Courses(Course_ID),
-                                       FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
-);
-
-INSERT INTO Progress (Progress_Rate, Course_ID, Student_ID)
-VALUES
     (1, 1, 1),
     (2, 2, 2),
     (3, 3, 3),

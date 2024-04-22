@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS Users(
-                                    User_ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                                    Pass VARCHAR(50) NOT NULL,
+    User_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Pass VARCHAR(50) NOT NULL,
     First_Name VARCHAR(15),
     Middle_Name VARCHAR(20),
     Last_Name VARCHAR(20)
