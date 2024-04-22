@@ -22,7 +22,7 @@ def write_ta_data(tas, csv_filename):
             writer.writerow(ta)
 
 # Replace the hardcoded TA data with data read from CSV
-csv_filename = "TA.csv"  # Update with your CSV filename
+csv_filename = "../TA.csv"  # Update with your CSV filename
 tas = read_ta_data(csv_filename)
 
 @ta_bp.route('/tas', methods=['GET'])

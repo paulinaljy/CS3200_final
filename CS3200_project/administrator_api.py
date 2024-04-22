@@ -22,7 +22,7 @@ def write_administrator_data(administrators, csv_filename):
             writer.writerow(admin)
 
 # Replace the hardcoded administrator data with data read from CSV
-csv_filename = "Administrator.csv"  # Update with your CSV filename
+csv_filename = "../Administrator.csv"  # Update with your CSV filename
 administrators = read_administrator_data(csv_filename)
 
 @administrator_bp.route('/administrator', methods=['GET'])
