@@ -15,7 +15,8 @@ from CS3200_project.student_api import student_bp
 from CS3200_project.administrator_api import administrator_bp
 from CS3200_project.teachingAssistant_api import ta_bp
 
-app.register_blueprint(student_bp, url_prefix='/students')
+app.register_blueprint(student_bp)
+                       # url_prefix='/students')
 # app.register_blueprint(professor_bp, url_prefix='/professors')
 app.register_blueprint(administrator_bp, url_prefix='/administrators')
 app.register_blueprint(ta_bp, url_prefix='/tas')
