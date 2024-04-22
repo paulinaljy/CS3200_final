@@ -14,44 +14,66 @@ def read_student_data(conn):
     cursor.close()
     return students
 
-conn = connect_to_database('canvas.db')
-with open('canvas.sql') as f:
+conn = connect_to_database('student.db')
+with open('student.sql') as f:
     conn.executescript(f.read())
 
 students = read_student_data(conn)
 
-@student_bp.route('/students', methods=['GET'])
-def get_students():
-    return jsonify(students)
-@student_bp.route('/students/<int:student_id>', methods=['GET'])
-def get_student(student_id):
-    student = next((s for s in students if s['Student_ID'] == str(student_id)), None)
-    if student:
-        return jsonify(student)
-    else:
-        return jsonify({'error': 'Student not found'}), 404
 
-@student_bp.route('/students', methods=['POST'])
-def add_student():
-    new_student = request.json
-    if 'Student_ID' in new_student and 'FirstName' in new_student and 'LastName' in new_student and 'ApptId' in new_student:
-        students.append(new_student)
-        return jsonify(new_student), 201
-    else:
-        return jsonify({'error': 'Student data incomplete'}), 400
+def fetch_courses_for_student(student_id):
+    conn = sqlite3.connect('student.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM Courses WHERE Student_ID=?", (student_id,))
+    courses = cursor.fetchall()
+    conn.close()
+    return courses
 
-@student_bp.route('/students/<int:student_id>', methods=['PUT'])
-def update_student(student_id):
-    student = next((s for s in students if s['Student_ID'] == str(student_id)), None)
-    if student:
-        updated_info = request.json
-        student.update(updated_info)
-        return jsonify(student)
-    else:
-        return jsonify({'error': 'Student not found'}), 404
+def add_course_for_student(student_id, course_data):
+    conn = sqlite3.connect('student.db')
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO Courses (Course_Name, Student_ID) VALUES (?, ?)",
+                   (course_data.get('CourseName'), student_id))
+    conn.commit()
+    new_course_id = cursor.lastrowid
+    conn.close()
+    return {'CourseID': new_course_id, 'CourseName': course_data.get('CourseName'), 'Student_ID': student_id}
 
-@student_bp.route('/students/<int:student_id>', methods=['DELETE'])
-def delete_student(student_id):
-    global students
-    students = [s for s in students if s['Student_ID'] != str(student_id)]
+def update_course_for_student(student_id, course_id, updated_course_data):
+    conn = sqlite3.connect('student.db')
+    cursor = conn.cursor()
+    cursor.execute("UPDATE Courses SET Course_Name=? WHERE Course_ID=? AND Student_ID=?",
+                   (updated_course_data.get('CourseName'), course_id, student_id))
+    conn.commit()
+    updated_course = {'CourseID': course_id, 'CourseName': updated_course_data.get('CourseName'), 'Student_ID': student_id}
+    conn.close()
+    return updated_course
+
+def delete_course_for_student(student_id, course_id):
+    conn = sqlite3.connect('student.db')
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM Courses WHERE Course_ID=? AND Student_ID=?", (course_id, student_id))
+    conn.commit()
+    conn.close()
+
+@student_bp.route('/students/<int:student_id>/courses', methods=['GET'])
+def get_student_courses(student_id):
+    courses = fetch_courses_for_student(student_id)
+    return jsonify(courses)
+
+@student_bp.route('/students/<int:student_id>/courses', methods=['POST'])
+def add_student_course(student_id):
+    course_data = request.json
+    added_course = add_course_for_student(student_id, course_data)
+    return jsonify(added_course), 201
+
+@student_bp.route('/students/<int:student_id>/courses/<int:course_id>', methods=['PUT'])
+def update_student_course(student_id, course_id):
+    updated_course_data = request.json
+    updated_course = update_course_for_student(student_id, course_id, updated_course_data)
+    return jsonify(updated_course)
+
+@student_bp.route('/students/<int:student_id>/courses/<int:course_id>', methods=['DELETE'])
+def delete_student_course(student_id, course_id):
+    delete_course_for_student(student_id, course_id)
     return '', 204

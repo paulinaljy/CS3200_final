@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS Professors(
 );
 
 INSERT INTO Professors (User_ID, Email, First_Name, Last_Name, Course_ID)
-VALUES (1, 'dnewburyt@walmart.com', 'Dulciana', 'Newbury', 1),
+VALUES (1, 'dnaewburyt@walmart.com', 'Dulciana', 'Newbury', 1),
         (2, 'asoftleys@google.com.hk', 'Arlette', 'Softley', 2),
         (3, 'jelcottr@ucoz.com', 'Jackson', 'Elcott', 3),
         (4, 'coxberryq@unc.edu', 'Clarinda', 'Oxberry', 4),
@@ -94,7 +94,7 @@ VALUES (1, 'dnewburyt@walmart.com', 'Dulciana', 'Newbury', 1),
        (29, 'jpudney1@sciencedaily.com', 'Johnny', 'Pudney', 29),
        (30, 'ahunday0@discuz.net', 'Alair', 'Hunday', 30),
        (31, 'dnewburyt@walmart.com', 'Dulciana', 'Newbury', 31),
-       (32, 'asoftleys@google.com.hk', 'Arlette', 'Softley', 32),
+       (32, 'asoftleys@google.com', 'Arlette', 'Softley', 32),
        (33, 'jelcottr@ucoz.com', 'Jackson', 'Elcott', 33),
        (34, 'coxberryq@unc.edu', 'Clarinda', 'Oxberry', 34),
        (35, 'bmillsp@alibaba.com', 'Brooke', 'Mills', 35),
@@ -144,7 +144,7 @@ VALUES
     (110, 'Sophia', 'Taylor', 'sophia.taylor@example.com', 20),
     (111, 'Jackson', 'Gonzalez', 'jackson.gonzalez@example.com', 21),
     (112, 'Ella', 'Anderson', 'ella.anderson@example.com', 22),
-    (113, 'Logan', 'Thomas', 'logan.thomas@example.com', 23),
+    (113, 'Logan', 'Thomas', 'logan.thomFas@example.com', 23),
     (114, 'Aria', 'Jackson', 'aria.jackson@example.com', 24),
     (115, 'Liam', 'White', 'liam.white@example.com', 25),
     (116, 'Sophia', 'Harris', 'sophia.harris@example.com', 26),
@@ -633,12 +633,24 @@ VALUES
 
 
 CREATE TABLE IF NOT EXISTS Progress(
-    Progress_Rate INT PRIMARY KEY,
-    Course_ID INT,
-    Student_ID INT,
-    FOREIGN KEY (Course_ID) REFERENCES Courses(Course_ID),
-    FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
-    );
+                                       Progress_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                                       Progress_Rate INT,
+                                       Course_ID INT,
+                                       Student_ID INT,
+                                       FOREIGN KEY (Course_ID) REFERENCES Courses(Course_ID),
+                                       FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
+);
+
+INSERT INTO Progress (Progress_Rate, Course_ID, Student_ID)
+VALUES
+CREATE TABLE IF NOT EXISTS Progress(
+                                       Progress_Rate INTEGER PRIMARY KEY,
+                                       Course_ID INT,
+                                       Student_ID INT,
+                                       FOREIGN KEY (Course_ID) REFERENCES Courses(Course_ID),
+                                       FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
+);
+
 INSERT INTO Progress (Progress_Rate, Course_ID, Student_ID)
 VALUES
     (1, 1, 1),
@@ -661,16 +673,18 @@ VALUES
     (18, 18, 18),
     (19, 19, 19),
     (20, 20, 20),
-    (71, 21, 21),
-    (72, 22, 22),
-    (73, 23, 23),
-    (74, 24, 24),
-    (75, 25, 25),
-    (76, 26, 26),
-    (77, 27, 27),
-    (78, 28, 28),
-    (79, 29, 29),
-    (80, 30, 30);
+    (21, 21, 21),
+    (22, 22, 22),
+    (23, 23, 23),
+    (24, 24, 24),
+    (25, 25, 25),
+    (26, 26, 26),
+    (27, 27, 27),
+    (28, 28, 28),
+    (29, 29, 29),
+    (30, 30, 30);
+
+
 
 
 CREATE TABLE IF NOT EXISTS Assignments(
@@ -856,14 +870,15 @@ VALUES
     (30, 15, 86, 30, 'Impressive effort!', 30);
 
 CREATE TABLE IF NOT EXISTS Feedback(
-    Message TEXT PRIMARY KEY,
-    Student_ID INT,
-    TA_ID INT,
-    Professor_ID INT,
-    Time DATETIME,
-    FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
-    FOREIGN KEY (TA_ID) REFERENCES TAs(TA_ID),
-    FOREIGN KEY (Professor_ID) REFERENCES Professors(Professor_ID)
+                                       Feedback_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                                       Message TEXT,
+                                       Student_ID INT,
+                                       TA_ID INT,
+                                       Professor_ID INT,
+                                       Time DATETIME,
+                                       FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+                                       FOREIGN KEY (TA_ID) REFERENCES TAs(TA_ID),
+                                       FOREIGN KEY (Professor_ID) REFERENCES Professors(Professor_ID)
 );
 
 INSERT INTO Feedback (Message, Student_ID, TA_ID, Professor_ID, Time)
@@ -874,7 +889,7 @@ VALUES
     ('Well done!', 4, 4, 4, '2024-04-21 10:45:00'),
     ('Impressive work!', 5, 5, 5, '2024-04-21 11:30:00'),
     ('Solid performance!', 6, 6, 6, '2024-04-21 12:15:00'),
-    ('Good effort overall.', 7, 7, 7, '2024-04-21 13:00:00'),
+    ('Good effort.', 7, 7, 7, '2024-04-21 13:00:00'),
     ('Great job!', 8, 8, 8, '2024-04-21 13:45:00'),
     ('Very good performance.', 9, 9, 9, '2024-04-21 14:30:00'),
     ('Impressive!', 10, 10, 10, '2024-04-21 15:15:00'),
@@ -895,8 +910,8 @@ VALUES
     ('Impressive work!', 25, 25, 25, '2024-04-22 02:30:00'),
     ('Solid performance!', 26, 26, 26, '2024-04-22 03:15:00'),
     ('Good effort overall.', 27, 27, 27, '2024-04-22 04:00:00'),
-    ('Great job!', 28, 28, 28, '2024-04-22 04:45:00'),
+    ('Great job!!', 28, 28, 28, '2024-04-22 04:45:00'),
     ('Very good performance.', 29, 29, 29, '2024-04-22 05:30:00'),
-    ('Impressive!', 30, 30, 30, '2024-04-22 06:15:00');
+    ('Impressive!!', 30, 30, 30, '2024-04-22 06:15:00');
 
 
