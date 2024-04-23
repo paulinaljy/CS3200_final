@@ -65,19 +65,125 @@ def create_appointment():
 
         conn.close()
 
-        return redirect(url_for('index1'))
+        return redirect(url_for('ta.index3'))
 
+@ta_bp.route('/appointmentFormDone')
+def index3():
+    return """
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Index 1 Demo</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f4;
+                }
+                .container {
+                    max-width: 800px;
+                    margin: 50px auto;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+                h1 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+                li {
+                    margin-bottom: 5px;
+                }
+                a {
+                    color: #007bff;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+        </head>
+        <body>
+         <div class="container">
+            <h1>CONFIRMATION</h1>
+            <p>After submitting the form in TA Appointment, the appointment details will be stored.</p>
+            <p>To view the appointments or make further changes, you can navigate through other pages.</p>
+            <ul>
+            <li><a href="{{ url_for('ta.index1') }}">Back to Appointment Form</a></li>
+            </ul>
+            </body>
+    </html>
+"""
 @ta_bp.route('/courseTAList')
 def index2():
     return """
-        <h2>Add TA to Course</h2>
-    <form action="/ta_courses" method="post">
-        <label for="ta_id">TA ID:</label><br>
-        <input type="text" id="ta_id" name="ta_id"><br><br>
-        <label for="course_id">Course ID:</label><br>
-        <input type="text" id="course_id" name="course_id"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Index 2 Demo</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f4;
+                }
+                .container {
+                    max-width: 800px;
+                    margin: 50px auto;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+                h1 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+                li {
+                    margin-bottom: 5px;
+                }
+                a {
+                    color: #007bff;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>COMFIRMATION</h1>
+                <p>After submitting the form for adding the TA, the TA will be added to the specified course.</p>
+                <p>You can navigate through other pages to perform more actions.</p>
+                <ul>
+                    <li><a href="{{ url_for('ta.index2') }}">Back to Add TA to Course Form</a></li>
+                </ul>
+            </div>
+        </body>
+        </html>
+
     """
     
 
@@ -97,7 +203,7 @@ def add_ta_to_course():
 
         conn.close()
 
-        return redirect(url_for('index2'))
+        return redirect(url_for('ta.index2'))
 
 
 @ta_bp.route('/courses/<int:course_id>', methods=['PUT'])
