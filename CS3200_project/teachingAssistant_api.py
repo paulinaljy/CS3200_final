@@ -68,7 +68,7 @@ def create_appointment():
         return redirect(url_for('index1'))
 
 @ta_bp.route('/courseTAList')
-def index1():
+def index2():
     return """
         <h2>Add TA to Course</h2>
     <form action="/ta_courses" method="post">

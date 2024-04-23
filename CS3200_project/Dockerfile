@@ -1,25 +1,20 @@
-##################################################
-# Dockerfile for a simple python image/container
-
-
-# Working from Python version 3.9
 FROM python:3.9-alpine
 
-# setting the working directory inside the container to /code
-WORKDIR /code
+# Install necessary build dependencies
+RUN apk add --no-cache mariadb-connector-c-dev build-base
 
-RUN apk add gcc musl-dev python3-dev libffi-dev openssl-dev
+# Create and set working directory
+RUN mkdir /usr/src/app/
+WORKDIR /usr/src/app/
 
-# copying the requirements.txt file from the host system to
-# inside the container
-COPY requirements.txt requirements.txt
+# Copy project files
+COPY . /usr/src/app/
 
-# install requirements inside the container using pip
+# Install Python dependencies
 RUN pip install -r requirements.txt
 
-# expose port 4000 from the container
+# Expose port
 EXPOSE 4000
 
-# tell the container to run the flask application
-# CMD ["python", "src/app.py"]
-CMD ["python", "CS3200_project/main.py"]
+# Run the application
+CMD ["python", "main.py"]
